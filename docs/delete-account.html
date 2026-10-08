@@ -27,7 +27,7 @@
 <body>
 <main>
   <h1>Delete your PocketGym (formerly Spotter) account</h1>
-  <div class="date">PocketGym, by Quarterdeck Collective LLC &middot; Last updated 1 October 2026</div>
+  <div class="date">PocketGym, by Quarterdeck Collective LLC &middot; Last updated 2 October 2026</div>
 
   <p>This page explains how to delete your PocketGym account and everything in it. You can do it
     yourself inside the app, and you can ask us to do it for you without installing anything.</p>
@@ -54,14 +54,16 @@
     <p><b>Cancel a store subscription first.</b> If you subscribed to PocketGym Plus through Google
       Play or the App Store, deleting your PocketGym account does <b>not</b> cancel that subscription
       and does not stop the billing. Cancel it in Google Play under Payments and subscriptions, or
-      in your Apple Account subscription settings, before you delete the account. A subscription
-      bought on the PocketGym website is cancelled automatically as part of the deletion.</p>
+      in your Apple Account subscription settings, before you delete the account. PocketGym no longer
+      sells subscriptions on its website (web purchases through Stripe ended on 18 September 2026).</p>
   </div>
 
   <h2>Take a copy first, if you want one</h2>
   <p>In the app, <b>Settings &rarr; Data &amp; privacy &rarr; Export my data</b> writes your workout
-    cards, every session you have logged, your plan, your collections, your chats with Pumpy and
-    your settings into a single JSON file on your device. Do this before you delete, not after.</p>
+    cards, every session you have logged, your plan, your collections, your goals and their programs,
+    the corrections you made to cards, your records and awards, your chats with Pumpy and any answers
+    you reported, your plan status, your reminder settings and your settings into a single JSON file on
+    your device. Do this before you delete, not after.</p>
 
   <h2>What gets deleted</h2>
   <ul>
@@ -72,8 +74,8 @@
     <li>your collections, and the corrections you made to cards;</li>
     <li>your conversations with Pumpy, and any answer of Pumpy's you reported;</li>
     <li>your profile, your settings, your reminder subscriptions and your personal save key;</li>
-    <li>your subscription record in PocketGym. A website subscription is cancelled at Stripe first and
-      the customer record there is deleted with it;</li>
+    <li>your subscription record in PocketGym, and any customer record left at Stripe from the old
+      website purchases (PocketGym asks Stripe to delete it);</li>
     <li>your Strava connection, if you made one &mdash; Strava is told to forget PocketGym and both
       access keys are deleted;</li>
     <li>your customer record at RevenueCat, which checks store purchases for PocketGym &mdash;
@@ -86,12 +88,13 @@
   <h2>What is kept, and why</h2>
   <ul>
     <li><b>Records of what the AI cost to run.</b> Your account id is stripped out of them, so they
-      are no longer attached to you. The detailed ones are cleared on a schedule after 40 and 90
-      days.</li>
+      are no longer attached to you. They are deleted after 13 months, and the detailed ones on a
+      schedule after 40 and 90 days.</li>
     <li><b>The shared extraction cache.</b> When any video is read for the first time, the resulting
       workout is stored under the video's own public ID so nobody has to pay to read it again. It
       holds only what was already public on the post and nothing about who saved it, so there is
-      nothing in it to attach to you and nothing to delete.</li>
+      nothing in it to attach to you and nothing to delete. An entry not updated for 18 months is
+      deleted.</li>
     <li><b>Payment records held by others.</b> Stripe, Google and Apple each keep their own record
       of a payment for as long as tax, accounting and fraud rules require. Those are not ours to
       delete.</li>

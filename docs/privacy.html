@@ -6,9 +6,9 @@
 <title>PocketGym — Privacy</title>
 <link rel="icon" href="icon.png">
 <style>
-  :root { color-scheme: light dark; --paper: #F5F6F8; --ink: #14171A; --ink-2: #58626E; --ember: #C9430F; }
+  :root { color-scheme: light dark; --paper: #F5F6F8; --ink: #14171A; --ink-2: #58626E; --ember: #C9430F; --line: rgba(20,23,26,.14); }
   @media (prefers-color-scheme: dark) {
-    :root { --paper: #101214; --ink: #EEF2F6; --ink-2: #AFBAC6; --ember: #FF9166; }
+    :root { --paper: #101214; --ink: #EEF2F6; --ink-2: #AFBAC6; --ember: #FF9166; --line: rgba(238,242,246,.16); }
   }
   body { margin: 0; background: var(--paper); color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -17,19 +17,35 @@
   h1 { font-size: 30px; letter-spacing: -.03em; margin: 0 0 6px; }
   .date { color: var(--ink-2); font-size: 13px; margin-bottom: 34px; }
   h2 { font-size: 17px; margin: 32px 0 8px; letter-spacing: -.02em; }
+  h3 { font-size: 15px; margin: 22px 0 6px; }
   p, li { color: var(--ink-2); font-size: 15px; }
   a { color: var(--ember); }
   code { background: rgba(128,128,128,.14); padding: 2px 5px; border-radius: 5px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--line);
+    color: var(--ink-2); overflow-wrap: anywhere; }
+  th { color: var(--ink); font-weight: 600; }
 </style>
 </head>
 <body>
 <main>
   <h1>Privacy</h1>
-  <div class="date">Last updated 1 October 2026</div>
+  <div class="date">Last updated 2 October 2026</div>
 
   <p>PocketGym (formerly Spotter) is operated by Quarterdeck Collective LLC. This page says plainly what it stores and what it does
     not do. If anything here is unclear, email
-    <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a>.</p>
+    <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a>.
+    Washington residents: see our <a href="consumer-health.html">Consumer Health Data Privacy Policy</a>.</p>
+
+  <h2 id="who">Who we are</h2>
+  <p>PocketGym is run by <b>Quarterdeck Collective LLC</b>, a company in the United States. We decide why and
+    how your personal information is used, and we are responsible for it.</p>
+  <p>Quarterdeck Collective LLC, 732 S 6th St Ste N, Las Vegas, NV 89101, United States.
+    <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a></p>
+  <p>Privacy contact: Privacy Officer,
+    <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a>. Email is the
+    fastest way to reach us. Write &ldquo;Privacy&rdquo; in the subject line.</p>
+  <p>PocketGym is offered in the United States, Canada, Australia and New Zealand.</p>
 
   <h2>What PocketGym stores</h2>
   <ul>
@@ -70,16 +86,84 @@
       Apple Health and Apple Watch heart-rate access are described below.</li>
   </ul>
 
-  <h2>Other services involved</h2>
+  <h2 id="use">How we use information</h2>
+  <p>You need an email address, or an Apple or Google account, to have an account. Everything else is
+    optional. Without AI permission, you can still log and plan workouts by hand.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>What we do</th><th>Information</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Account and sign-in (email, Apple, Google)</td><td>Email; password hash; name; provider ID; account ID</td><td>To give you an account and keep it yours.</td></tr>
+      <tr><td>Library, logging, plan, collections, records, goals</td><td>Links and public captions; cards; sessions, sets, reps, weights, notes, effort; plan; goals</td><td>This is the app: it keeps what you ask it to keep.</td></tr>
+      <tr><td>AI reading of posts and uploads</td><td>Links, captions, images, text, audio or video, still frames cut on the phone</td><td>To turn a video into a workout card. Only after you allow AI processing.</td></tr>
+      <tr><td>Pumpy, <i>How to do this</i>, <i>Swap or modify</i></td><td>Your messages plus workout context (see <a href="#ai">AI and Pumpy</a>)</td><td>To answer you with your own training in view. Only after you allow AI processing.</td></tr>
+      <tr><td>Jev: matching, sorting, ranking, safety screening</td><td>Exercise names, captions, search text, Pumpy messages</td><td>To link exercises, sort shared links, rank searches and keep advice safe. Only after you allow AI processing.</td></tr>
+      <tr><td>Health information (see <a href="#health">below</a>)</td><td>Body weight and weigh-ins; weight-loss goals; injury, pain or condition details; safety markers</td><td>To tailor coaching and keep it safe. Only with your explicit consent.</td></tr>
+      <tr><td>Subscriptions and payments</td><td>Account, product and transaction IDs; status; a Stripe customer ID on an old web record</td><td>To give you the plan you paid for, and keep the records tax and accounting law requires.</td></tr>
+      <tr><td>Creator codes</td><td>Code; qualifying transactions</td><td>To pay the creator what they earned.</td></tr>
+      <tr><td>Security, abuse prevention, allowances, spend caps</td><td>Counters; AI request records; upload permits; logs</td><td>To keep PocketGym up, fair and affordable for everyone.</td></tr>
+      <tr><td>Service email (codes, confirmations, resets, deletion)</td><td>Email</td><td>To sign you in and confirm changes to your account. No marketing email.</td></tr>
+      <tr><td>Reminders</td><td>Push token; time zone; settings</td><td>To send the reminders you turned on.</td></tr>
+      <tr><td>Send to Strava</td><td>Workout summary, only when you tap Send</td><td>Because you asked.</td></tr>
+      <tr><td>Reviewing a Pumpy answer you report</td><td>A copy of that answer</td><td>To check it and fix what went wrong.</td></tr>
+      <tr><td>Internal measurements (no third-party analytics)</td><td>Feature counts; subscription activity; AI outcomes, timing, errors, costs</td><td>To see what works, what breaks and what it costs.</td></tr>
+      <tr><td>Shared extraction cache</td><td>Public post information, not linked to any account</td><td>So a video read once is ready at once for the next person, without another AI call.</td></tr>
+      <tr><td>Legal duties (rights requests, age rules)</td><td>As the request or the law requires</td><td>Because the law requires it.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 id="health">Health information</h2>
+  <p><b>What we treat as health information:</b></p>
+  <ul>
+    <li>your body weight and your last 52 weigh-ins;</li>
+    <li>a weight-loss goal and its target;</li>
+    <li>anything you type about pain, injury, a medical condition, medication or pregnancy, in notes or to Pumpy;</li>
+    <li>the 1&ndash;10 effort rating on a finished workout.</li>
+  </ul>
+  <p>Your workout log is fitness information, and we protect it the same way.</p>
+  <p><b>Safety markers.</b> If a Pumpy message suggests a medical emergency or disordered eating, mentions
+    medication or supplements, or someone under 18 asks to lose weight, Pumpy replies with a fixed safety
+    message. We mark the message so the rule holds for the rest of the conversation.</p>
+  <p><b>Your explicit consent.</b> We process health information only with your explicit consent. The AI
+    permission PocketGym shows before your first AI request (in the app, or in the share sheet) asks for it in
+    plain words: what you send can include health details you choose to share, such as injuries, pain, body
+    weight and goals, and allowing AI processing means you consent to PocketGym and the AI providers it names
+    processing them to coach you. We record the date and the version of the wording you agreed to, and when the
+    wording changes we ask again. Body weight is optional: the field says it is saved to your account to tailor
+    your coaching, and that you can clear it any time.</p>
+  <p><b>To withdraw consent or remove health information:</b></p>
+  <ul>
+    <li><b>Settings &rsaquo; Data &amp; privacy &rsaquo; AI processing &rsaquo; Turn off AI processing.</b> Nothing
+      more is sent to AI. Requests already sent and data already saved stay.</li>
+    <li><b>Delete single items.</b> Clearing body weight removes all your weigh-ins. You can also delete a chat, a
+      session or a saved workout.</li>
+    <li><b><a href="#delete">Delete account</a></b> removes everything.</li>
+  </ul>
+  <p><b>Never for advertising.</b> There are no ads and no trackers, and we don't sell health information or use it
+    for marketing.</p>
+  <p><b>Apple Health and Apple Watch stay on your devices.</b> On iPhone, PocketGym only writes finished workouts to
+    Apple Health and never reads it. The Watch reads heart rate and active energy during a workout to show them on
+    your watch and phone. Nothing from Apple Health, and no heart-rate value, goes to our servers or to AI.</p>
+
+  <h2 id="ai">AI and Pumpy</h2>
+  <p><b>Pumpy is an AI, not a person.</b> OpenAI's model writes its answers. AI can be wrong, so check before you
+    train. Pumpy is not medical advice, and it can't change your library or plan until you confirm. We use three AI
+    providers, and only after you allow AI processing. Our server refuses requests to any other AI host.</p>
   <p>PocketGym asks for permission before using AI features. You can decline and keep logging
     workouts and planning manually. In Settings, you can review or turn off AI processing.
     Turning it off stops future AI requests after the choice is saved; it does not recall
     requests already sent or delete saved workouts and conversations.</p>
-  <p>Every service provider named on this page receives only what it needs to do its job for
-    PocketGym, and is bound by its terms with PocketGym to use that data only to provide its service
-    and to protect it at least as well as this policy describes. None of them may sell it or use it
-    for advertising. Strava, which you connect yourself, and the video platforms whose players you
-    choose to play handle what you send them under their own policies.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Provider</th><th>Receives</th><th>When</th><th>Retention</th></tr></thead>
+    <tbody>
+      <tr><td>OpenAI (US)</td><td>Captions, descriptions, images and text. For Pumpy, <i>How to do this</i> and <i>Swap or modify</i>: your message, an index of your workouts, your planned days, a summary of recent sessions, estimated best lifts, your goal, and your body weight if entered. Not your email</td><td>Saving a post; each Pumpy, <i>How to do this</i> or <i>Swap</i> request</td><td>Under OpenAI's API terms (<a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">data controls</a>)</td></tr>
+      <tr><td>Google Gemini (US)</td><td>Audio or video from a post or upload; up to 3 still images. Never your typed text or chats</td><td>When a video has too little written workout</td><td>We delete our upload after each read; anything else under Google's API terms (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">terms</a>)</td></tr>
+      <tr><td>TypeSafe AI's Jev, through Cloudflare Workers AI</td><td>Exercise names, captions, search text, and your Pumpy messages, which may include health details you type, for safety screening; the text of a Pumpy answer you report, to sort it for review. Never images, audio, video or Apple Health data</td><td>Matching, sorting, ranking, safety screening</td><td>Cloudflare lists zero data retention for this model; TypeSafe AI states it does not train on customer data. We keep only Jev's answer and a keyed fingerprint of the input (no text, no account ID) for 90 days</td></tr>
+    </tbody>
+  </table>
+  </div>
   <p>Saving a post can send its caption, description, carousel images, or text you supply to
     OpenAI to extract exercises. Google Gemini is used for supported audio/video reads, including sampled video frames. Text, coaching and image
     requests do not automatically fall back to Google. Private uploads can also be processed by Google. Groq is no longer part of
@@ -97,17 +181,30 @@
   <p>To match exercises, sort shared links, rank searches and keep advice safe, PocketGym also
     sends <a href="https://developers.cloudflare.com/ai/models/typesafe/jev/" target="_blank" rel="noopener">TypeSafe AI's
     Jev</a> model the text those decisions need: exercise names,
-    post captions and descriptions, what you type into a search, and your Pumpy messages. Jev
-    answers fixed questions about that text (for example, which exercise a name means); it does
-    not write replies and never receives images, audio, video or Apple Health data. PocketGym reaches
-    Jev through Cloudflare Workers AI, which lists zero data retention for this model; PocketGym would
+    post captions and descriptions, what you type into a search, and your Pumpy messages, which Jev screens for
+    safety (a message can include health details you chose to type). Jev
+    answers fixed questions about that text (for example, which exercise a name means, or whether a message needs
+    the safety reply); it does not write replies and never receives images, audio, video or Apple Health data.
+    PocketGym reaches Jev through Cloudflare Workers AI, which lists zero data retention for this model; PocketGym would
     reach Jev directly from TypeSafe AI only under a zero-data-retention agreement. TypeSafe AI states
     that it does not train on customer data (<a href="https://docs.typesafe.ai/legal.md" target="_blank" rel="noopener">TypeSafe's terms</a>).
     PocketGym keeps Jev's answers with a keyed fingerprint of the input to check its accuracy, never
     the text itself. Jev is used only after you allow the AI permission that names it.</p>
+  <p><b>When a person reads your data.</b> No one reads your chats, except a Pumpy answer you report: we keep a copy
+    of up to 32,000 characters so it can be reviewed and fixed. Safety screening only chooses whether Pumpy answers
+    normally or with a fixed safety message; it makes no decision about you beyond that reply.</p>
+
+  <h2>Other services involved</h2>
+  <p>Every service provider named on this page receives only what it needs to do its job for
+    PocketGym, and is bound by its terms with PocketGym to use that data only to provide its service
+    and to protect it at least as well as this policy describes. None of them may sell it or use it
+    for advertising. Strava, which you connect yourself, and the video platforms whose players you
+    choose to play handle what you send them under their own policies.</p>
   <p>Data is stored with
     <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> in the
-    United States. Fonts are loaded from Google Fonts.</p>
+    United States. Sign-in codes and account emails are sent through
+    <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a>, which
+    receives your email address and the message. Fonts are loaded from Google Fonts and Fontshare.</p>
   <p>Video playback happens in an embedded player from Instagram, TikTok or YouTube. Those
     players are the platforms' own and follow the platforms' privacy policies.</p>
   <p>When you ask how an exercise is done, PocketGym shows a short demonstration clip. These come
@@ -123,36 +220,33 @@
     (no-cookie)</a> YouTube player that is only added to the page once you tap and is removed
     again when you close the sheet. The link beside it opens YouTube's own search results.</p>
 
+  <h2 id="transfers">International transfers</h2>
+  <p>PocketGym is run from the United States. Your data is stored with Supabase in the United States, and our
+    providers process it in the United States and possibly other countries where they operate. US law may differ
+    from the law where you live, and US courts and authorities may be able to access data held there.</p>
+  <ul>
+    <li><b>Canada:</b> our US service providers are bound by contract to protect your information and use it only
+      for PocketGym. While it is in the United States, US courts and authorities may access it.</li>
+    <li><b>Australia:</b> we are likely to disclose your personal information to recipients in the United States,
+      and possibly other countries where our providers operate. We take reasonable steps so they handle it
+      consistently with the Australian Privacy Principles.</li>
+    <li><b>New Zealand:</b> our overseas providers act only on our behalf, and we stay responsible for your
+      information under the Privacy Act 2020.</li>
+  </ul>
+
   <h2 id="payments">Payments</h2>
   <p>In the native Android and iPhone apps, purchases are handled by Google Play or Apple. RevenueCat validates purchases and synchronizes subscription access with your PocketGym account. RevenueCat receives your PocketGym account ID, purchase history, product and transaction identifiers, subscription status, and technical information needed to process purchases. It does not receive your workout library or coaching conversations. Payment-card details stay with the store. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s privacy policy</a>.</p>
   <p>Store subscriptions renew until cancelled in Google Play or Apple subscription settings. Deleting your PocketGym account or uninstalling the app does not cancel store subscriptions. Cancel in the store first if you want billing to stop. Store providers may retain transaction records required for tax, accounting, fraud prevention, and legal obligations.</p>
-
-  <p>Where web purchases are offered, PocketGym Plus is paid for through
-    <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a>, and the payment
-    happens on Stripe's own checkout page, not on PocketGym's. Your card number, the security code
-    on the back of it and whatever address your bank wants go to Stripe and stop there.
-    <b>PocketGym does not store your payment-card details.</b></p>
-  <p>What PocketGym keeps, on a row attached to your account, is only what it needs to know whether
-    you are on the paid plan today:</p>
-  <ul>
-    <li>the customer and subscription identifiers Stripe gave you, so the two systems can talk
-      about the same person;</li>
-    <li>which plan it is, whether it is on trial, running, cancelled or unpaid, whether it is set
-      to stop at the end of the period, and the date that period ends;</li>
-    <li>the date a payment last failed, if one has, so the app can say so and offer the fix;</li>
-    <li>a log of the notifications Stripe sends — the identifier and type of each one, and when it
-      was handled. That log is how PocketGym avoids acting on the same message twice. It holds no
-      payment details.</li>
-  </ul>
-  <p>Stripe is its own company and handles your payment data under
-    <a href="https://stripe.com/privacy" target="_blank" rel="noopener">its own privacy policy</a>.
-    PocketGym sends it your account identifier so a payment can be matched back to you, and your
-    email address if you give Stripe one at checkout.</p>
-  <p>If you cancel, the row stays until the period you paid for runs out and then says you are on
-    the free plan. <b>Deleting your account cancels a Stripe subscription first</b>, then deletes your
-    customer record at Stripe along with everything else. Stripe keeps its own record of the
-    payments themselves for as long as tax and accounting law says it must — that part is not
-    PocketGym's to delete.</p>
+  <p><b>PocketGym no longer sells subscriptions on the web.</b> Web purchases through
+    <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a> ended on 18 September 2026,
+    and no web subscription bills anyone. <b>PocketGym does not store your payment-card details.</b> If your account
+    has a record from Stripe's time, PocketGym keeps on it only the customer and subscription identifiers Stripe gave
+    you, which plan it was and its status, the date the period ends, and the date a payment last failed, if one did;
+    PocketGym's log of the notifications Stripe sent holds each one's identifier, type and when it was handled, and
+    no account or payment details. Deleting your account removes the record from PocketGym and asks Stripe to delete
+    the customer there. Stripe keeps its own record of payments under
+    <a href="https://stripe.com/privacy" target="_blank" rel="noopener">its own privacy policy</a>, for as long as tax
+    and accounting law says it must.</p>
 
   <h2 id="connections">Connections</h2>
   <p>PocketGym can connect to <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">Strava</a>,
@@ -210,10 +304,12 @@
   <p>PocketGym records usage allowances, AI request outcomes, processing times, errors and costs
     to operate the service, prevent abuse and improve reliability. Internal reports also
     summarize saves, completed workouts, use of features and subscription activity. These
-    records can be linked to your account while it exists. RevenueCat also processes purchase
+    records can be linked to your account while it exists, and are kept for the periods in
+    <a href="#retention">Retention</a>. RevenueCat also processes purchase
     information for subscription analytics.</p>
-  <p>If you enter a creator code, PocketGym records which code you used and qualifying
-    subscription transactions so it can apply the offer and account for creator earnings.
+  <p>If you redeem a creator's offer code in the App Store or Google Play, the store tells
+    PocketGym which code was used. PocketGym records it with qualifying subscription
+    transactions so it can account for creator earnings.
     Creator reporting shows aggregate counts and earnings rather than your workout library or
     coaching conversations. When you delete your account, the account link is removed from
     retained earnings records; transaction and payout records may remain for accounting.</p>
@@ -238,15 +334,95 @@
   <p>When a video is read for the first time, the resulting workout is cached under the video's
     public ID so the next person who saves the same video gets it instantly and no AI call is
     needed. That cache holds only information taken from the public post — never anything about
-    who saved it. It is not linked to any account, so deleting an account does not remove it.</p>
+    who saved it. It is not linked to any account, so deleting an account does not remove it.
+    An entry not updated for 18 months is deleted; a creator can ask us to remove one sooner
+    (see the <a href="terms.html">terms</a>).</p>
+
+  <h2 id="retention">Retention</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Information</th><th>How long</th></tr></thead>
+    <tbody>
+      <tr><td>Account, profile, settings (consent date and version, goal, body weight)</td><td>Until you delete your account</td></tr>
+      <tr><td>Body-weight history</td><td>Your last 52 weigh-ins; clearing the field removes all of them</td></tr>
+      <tr><td>Workouts, sessions, plan, collections, corrections, records, goals</td><td>Until you delete the item or your account</td></tr>
+      <tr><td>Pumpy chats and safety markers</td><td>Until you delete the chat or your account</td></tr>
+      <tr><td>A reported Pumpy answer</td><td>Until you delete your account</td></tr>
+      <tr><td>Uploads and still frames cut on the phone</td><td>Deleted when the read finishes; a cleanup removes anything left after 2 hours</td></tr>
+      <tr><td>Our upload to Google</td><td>Deleted after the read; anything Google keeps is under its API terms</td></tr>
+      <tr><td>Save jobs (the server's record of reading a video for you)</td><td>30 days after the job finishes; deleted with your account</td></tr>
+      <tr><td>Reminder registrations</td><td>Until you turn reminders off, the device rejects them, or you delete your account</td></tr>
+      <tr><td>Subscription status</td><td>Until you delete your account</td></tr>
+      <tr><td>Strava keys</td><td>Until you disconnect or delete your account</td></tr>
+      <tr><td>Apple sign-in token</td><td>Until you delete your account (revoked at Apple first)</td></tr>
+      <tr><td>Save and coaching counters</td><td>13 months; deleted with your account</td></tr>
+      <tr><td>AI cost ledger (provider, model, tokens, cost)</td><td>13 months; your account ID is removed when you delete your account</td></tr>
+      <tr><td>AI admission records</td><td>40 days; deleted with your account</td></tr>
+      <tr><td>AI cost reservations</td><td>90 days; your account ID is removed when you delete your account</td></tr>
+      <tr><td>Upload permits</td><td>7 days</td></tr>
+      <tr><td>Per-minute counters</td><td>About 10 minutes</td></tr>
+      <tr><td>Jev decision log (no text, no account ID)</td><td>90 days</td></tr>
+      <tr><td>Deletion requests to providers</td><td>Until the provider confirms; a Strava request stops after 8 tries or 7 days, and RevenueCat and Stripe requests are retried at least once a day until they confirm</td></tr>
+      <tr><td>Creator-code earnings</td><td>7 years from the payment, for accounting; your account link is removed when you delete your account</td></tr>
+      <tr><td>Stripe notification log (no account ID or payment details)</td><td>7 years</td></tr>
+      <tr><td>Shared extraction cache (public post data, no account)</td><td>18 months after the entry was last updated</td></tr>
+      <tr><td>Cover images of public posts shown on saved cards</td><td>No set period: every card saved from that post shows the same image</td></tr>
+      <tr><td>On-iPhone workout journal</td><td>Files older than 7 days are deleted at the next workout</td></tr>
+      <tr><td>Server and sign-in logs (may include IP address), backups</td><td>Kept by Supabase, our host, under its log and backup retention</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 id="rights">Your rights</h2>
+  <h3>Everyone</h3>
+  <ul>
+    <li><b>Export my data:</b> Settings &rsaquo; Data &amp; privacy &rsaquo; Export my data writes a JSON file of
+      everything in your account (see <a href="#export">below</a>).</li>
+    <li><b>Correct:</b> edit in the app, or email us.</li>
+    <li><b>Delete:</b> Settings &rsaquo; Data &amp; privacy &rsaquo; Delete account, or delete single items. If you
+      can't sign in, email us from your account's address; we erase it within 30 days of confirming it's you.</li>
+    <li><b>Stop AI processing:</b> Settings &rsaquo; Data &amp; privacy &rsaquo; AI processing.</li>
+    <li><b>Anything else:</b> <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a>.
+      We may ask you to confirm the request comes from your account's email. Requests are free.</li>
+  </ul>
+  <h3>Canada</h3>
+  <p>You can access and correct your personal information and challenge our compliance with PIPEDA. We answer
+    within 30 days. You can complain to the Office of the Privacy Commissioner of Canada
+    (<a href="https://www.priv.gc.ca" target="_blank" rel="noopener">priv.gc.ca</a>).</p>
+  <h3>Australia</h3>
+  <p>You can ask to access (APP 12) and correct (APP 13) your personal information, and we answer within 30 days.
+    You can complain to the Office of the Australian Information Commissioner
+    (<a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>).</p>
+  <h3>New Zealand</h3>
+  <p>You can ask to access (IPP 6) and correct (IPP 7) your personal information, and we answer within 20 working
+    days. You can complain to the Privacy Commissioner
+    (<a href="https://www.privacy.org.nz" target="_blank" rel="noopener">privacy.org.nz</a>).</p>
+  <h3>United States</h3>
+  <p>We don't sell your personal information or share it for targeted advertising. That includes residents of
+    Nevada and Washington: we do not sell covered information or consumer health data. Washington residents: see
+    our <a href="consumer-health.html">Consumer Health Data Privacy Policy</a>. Wherever you live, you can use the
+    export, correction and deletion options above.</p>
+
+  <h2 id="children">Children and teens</h2>
+  <p>PocketGym is for people 13 and older. If we learn someone under 13 has an account, we delete it. Email us if you
+    think a child under 13 is using PocketGym.</p>
+  <p><b>Under 18:</b> Pumpy won't set a weight-loss goal for anyone who says they are under 18, and offers a strength
+    goal instead. Weight-loss plans ask &ldquo;Are you 18 or older?&rdquo; and need a &ldquo;Yes&rdquo;. We remember an
+    under-18 statement for the whole conversation.</p>
+  <p><b>App-store age signals:</b> some US states (for example Texas, Utah and Louisiana) require apps to use the app
+    stores' age range and parental-consent signals. Support for these signals is being added to PocketGym. When it
+    arrives, we will use them only to apply age rules, meet the law and keep users safe, and delete them once used.</p>
 
   <h2 id="export">Taking your data with you</h2>
   <p>Settings &rarr; Data &amp; privacy &rarr; <b>Export my data</b> writes everything you put into
     PocketGym &mdash; your workout cards, every session you have logged, your plan, your collections,
-    your chats with Pumpy and your settings &mdash; into a single JSON file on your device. It is a
-    plain, structured, machine-readable format, so you can read it yourself or move it somewhere
-    else. Your personal save key is deliberately left out of the file, because it works without a
-    password and files get forwarded.</p>
+    your goals and their programs, the corrections you made to cards, your records and awards,
+    your chats with Pumpy and any Pumpy answers you reported, your plan status (store and subscription
+    records, without payment details), your reminder settings and your settings &mdash; into a single
+    JSON file on your device. It is a plain, structured, machine-readable format, so you can read it
+    yourself or move it somewhere else. Your personal save key, reminder tokens and addresses, and
+    connection keys (Strava, Apple) are deliberately left out of the file, because each works as a key
+    and files get forwarded.</p>
 
   <h2 id="delete">Deleting your account</h2>
   <p>Removing a workout deletes it immediately. To delete your <b>whole account</b>, open PocketGym
@@ -258,8 +434,9 @@
     <li>your collections and the corrections you made to cards;</li>
     <li>your chats with Pumpy;</li>
     <li>your profile, your settings and your personal save key;</li>
-    <li>your subscription record in PocketGym; a Stripe subscription is cancelled and its customer
-      record deleted. Google Play and Apple subscriptions must be cancelled in the store separately;</li>
+    <li>your subscription record in PocketGym, and any customer record left at Stripe from the old web
+      purchases (PocketGym asks Stripe to delete it). Google Play and Apple subscriptions must be cancelled
+      in the store separately;</li>
     <li>your Strava connection, if you made one — Strava is told to forget PocketGym and both
       access keys are deleted;</li>
     <li>your customer record at RevenueCat — PocketGym asks RevenueCat to delete it, and keeps
@@ -271,12 +448,20 @@
   </ul>
   <p>Export your data first if you want to keep it. Account deletion cannot be undone in the app.
     Backup copies and provider security records may remain under their separate retention policies.
-    PocketGym keeps its own record of what the AI cost to run, and the deletion strips your account
-    id out of those rows rather than keeping them attached to you. New AI reservation records
+    PocketGym keeps its own record of what the AI cost to run for 13 months, and the deletion strips your
+    account id out of those rows rather than keeping them attached to you. New AI reservation records
     are retained for up to 90 days; request admission records for up to 40 days, with scheduled cleanup.</p>
   <p>If you cannot sign in, email
     <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a> from your
     account's address and it will be erased for you.</p>
+
+  <h2 id="changes">Changes to this policy</h2>
+  <p>We'll update this policy as PocketGym changes; the date at the top shows the latest version.</p>
+  <p><b>Significant changes</b> (new kinds of information, new uses, a new AI provider, fewer rights): we'll tell you
+    in the app or by email before they take effect.</p>
+  <p><b>Changes to something you agreed to:</b> where a change affects something you consented to, such as AI
+    processing, we'll ask again, and the feature stays off until you answer.</p>
+  <p>Earlier versions: email us and we'll send you the version you ask for.</p>
 
   <p style="margin-top:40px"><a href="./">← Back to PocketGym</a></p>
 </main>
