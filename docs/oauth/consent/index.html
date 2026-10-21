@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-729oyKhMU3y278dW3hw4ACpYCvaXmXvIe8ZjIg5bw2g='; script-src 'sha256-EI9AVN0Iyrzukruuvs/mgVbXuASyxpKbKy+AndxGGdU='; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Connect PocketGym</title>
+<link rel="icon" href="../../icon.png">
+<!--
+  Supabase's OAuth server sends people to its Site URL (this Pages site) plus the
+  authorization path /oauth/consent/, with ?authorization_id=... in the address. The
+  consent screen itself lives on the pocketgym-edge Worker, where it can change without
+  republishing this site (design/chatgpt-plugin/CONTRACT-V2.md section 5, V2-AUTH.md).
+  This page only forwards there with the same query string. No fetch, no storage, no
+  script from anywhere else. With scripts off, the link opens the consent page, which
+  says it needs JavaScript.
+-->
+<style>
+  :root { color-scheme: light dark; --paper: #F5F6F8; --ink: #14171A; --ink-2: #58626E; }
+  @media (prefers-color-scheme: dark) { :root { --paper: #101214; --ink: #EEF2F6; --ink-2: #AFBAC6; } }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: var(--paper); color: var(--ink); line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { width: 100%; max-width: 380px; box-sizing: border-box; text-align: center; padding: 32px 24px; }
+  h1 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 10px; }
+  p { color: var(--ink-2); font-size: 15px; margin: 0; }
+  a { color: var(--ink); font-weight: 600; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Connecting PocketGym</h1>
+  <p><a id="go" href="https://getpocketgym.com/oauth/consent">Continue to PocketGym</a></p>
+</main>
+<script>
+  // The Worker origin, on the domain (DECISIONS 87).
+  var ORIGIN = "https://getpocketgym.com";
+  var to = ORIGIN + "/oauth/consent" + location.search;
+  document.getElementById("go").href = to;
+  location.replace(to);
+</script>
+</body>
+</html>

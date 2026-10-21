@@ -23,14 +23,14 @@
   code { background: rgba(128,128,128,.14); padding: 2px 5px; border-radius: 5px; font-size: 13px; }
   table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; font-size: 14px; }
   th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--line);
-    color: var(--ink-2); overflow-wrap: anywhere; }
+    color: var(--ink-2); overflow-wrap: break-word; }
   th { color: var(--ink); font-weight: 600; }
 </style>
 </head>
 <body>
 <main>
   <h1>Privacy</h1>
-  <div class="date">Last updated 2 October 2026</div>
+  <div class="date">Last updated 21 October 2026 (reading on your iPhone, and pictures)</div>
 
   <p>PocketGym (formerly Spotter) is operated by Quarterdeck Collective LLC. This page says plainly what it stores and what it does
     not do. If anything here is unclear, email
@@ -81,14 +81,17 @@
       keep the operational and subscription measurements described below.</li>
     <li>Your library, logs and plan are private to your account and are not sold. Relevant details
       are processed by the service providers described below when you use AI features.</li>
-    <li>PocketGym does not collect your location. Workout logs are fitness information, and anything
+    <li>The PocketGym app does not collect your location. The ChatGPT plugin receives a rough location from
+      ChatGPT with each request and does not read or keep it (see <a href="#chatgpt">PocketGym in ChatGPT</a>).
+      Workout logs are fitness information, and anything
       you type into notes or Pumpy may include health or other sensitive information. Optional
       Apple Health and Apple Watch heart-rate access are described below.</li>
   </ul>
 
   <h2 id="use">How we use information</h2>
   <p>You need an email address, or an Apple or Google account, to have an account. Everything else is
-    optional. Without AI permission, you can still log and plan workouts by hand.</p>
+    optional. Without AI permission, you can still log and plan workouts by hand, and an iPhone that can read videos
+    itself can still turn videos into cards (see <a href="#on-device">Reading on your iPhone</a>).</p>
   <div style="overflow-x:auto">
   <table>
     <thead><tr><th>What we do</th><th>Information</th><th>Why</th></tr></thead>
@@ -96,7 +99,9 @@
       <tr><td>Account and sign-in (email, Apple, Google)</td><td>Email; password hash; name; provider ID; account ID</td><td>To give you an account and keep it yours.</td></tr>
       <tr><td>Library, logging, plan, collections, records, goals</td><td>Links and public captions; cards; sessions, sets, reps, weights, notes, effort; plan; goals</td><td>This is the app: it keeps what you ask it to keep.</td></tr>
       <tr><td>AI reading of posts and uploads</td><td>Links, captions, images, text, audio or video, still frames cut on the phone</td><td>To turn a video into a workout card. Only after you allow AI processing.</td></tr>
+      <tr><td>Reading a video on your iPhone (see <a href="#on-device">below</a>)</td><td>The finished card; for a link, also the link and the post's public caption and cover image</td><td>To turn a video into a workout card on your iPhone. No AI provider receives anything, so no AI permission is needed.</td></tr>
       <tr><td>Pumpy, <i>How to do this</i>, <i>Swap or modify</i></td><td>Your messages plus workout context (see <a href="#ai">AI and Pumpy</a>)</td><td>To answer you with your own training in view. Only after you allow AI processing.</td></tr>
+      <tr><td><i>Add this video's tips to my plan</i>, on an iPhone that can read videos itself</td><td>The workout and exercises chosen, and Pumpy's sentence</td><td>To add a video's exercises to a planned day once you confirm. Worked out on your iPhone; no AI permission needed.</td></tr>
       <tr><td>Jev: matching, sorting, ranking, safety screening</td><td>Exercise names, captions, search text, Pumpy messages</td><td>To link exercises, sort shared links, rank searches and keep advice safe. Only after you allow AI processing.</td></tr>
       <tr><td>Health information (see <a href="#health">below</a>)</td><td>Body weight and weigh-ins; weight-loss goals; injury, pain or condition details; safety markers</td><td>To tailor coaching and keep it safe. Only with your explicit consent.</td></tr>
       <tr><td>Subscriptions and payments</td><td>Account, product and transaction IDs; status; a Stripe customer ID on an old web record</td><td>To give you the plan you paid for, and keep the records tax and accounting law requires.</td></tr>
@@ -109,6 +114,8 @@
       <tr><td>Internal measurements (no third-party analytics)</td><td>Feature counts; subscription activity; AI outcomes, timing, errors, costs</td><td>To see what works, what breaks and what it costs.</td></tr>
       <tr><td>Shared extraction cache</td><td>Public post information, not linked to any account</td><td>So a video read once is ready at once for the next person, without another AI call.</td></tr>
       <tr><td>Legal duties (rights requests, age rules)</td><td>As the request or the law requires</td><td>Because the law requires it.</td></tr>
+      <tr><td>ChatGPT plugin: reading a link, checking and showing a card</td><td>The link; public post text; text you share in ChatGPT; a hashed ID; the card</td><td>To turn a link into a checked workout card. See <a href="#chatgpt">PocketGym in ChatGPT</a>.</td></tr>
+      <tr><td>ChatGPT plugin: counts and limits</td><td>Event names; a hashed ID; the card or post; outcomes; daily counters</td><td>To run the plugin, keep within each platform's limits and see whether it works.</td></tr>
     </tbody>
   </table>
   </div>
@@ -147,9 +154,12 @@
     your watch and phone. Nothing from Apple Health, and no heart-rate value, goes to our servers or to AI.</p>
 
   <h2 id="ai">AI and Pumpy</h2>
-  <p><b>Pumpy is an AI, not a person.</b> OpenAI's model writes its answers. AI can be wrong, so check before you
+  <p><b>Pumpy is an AI, not a person.</b> OpenAI's model writes its answers, except for the one iPhone action
+    described below. AI can be wrong, so check before you
     train. Pumpy is not medical advice, and it can't change your library or plan until you confirm. We use three AI
-    providers, and only after you allow AI processing. Our server refuses requests to any other AI host.</p>
+    providers, and only after you allow AI processing. Our server refuses requests to any other AI host. Reading a
+    video on your iPhone uses Apple's models on the iPhone itself and sends nothing to these providers. See
+    <a href="#on-device">Reading on your iPhone</a>.</p>
   <p>PocketGym asks for permission before using AI features. You can decline and keep logging
     workouts and planning manually. In Settings, you can review or turn off AI processing.
     Turning it off stops future AI requests after the choice is saved; it does not recall
@@ -159,13 +169,14 @@
     <thead><tr><th>Provider</th><th>Receives</th><th>When</th><th>Retention</th></tr></thead>
     <tbody>
       <tr><td>OpenAI (US)</td><td>Captions, descriptions, images and text. For Pumpy, <i>How to do this</i> and <i>Swap or modify</i>: your message, an index of your workouts, your planned days, a summary of recent sessions, estimated best lifts, your goal, and your body weight if entered. Not your email</td><td>Saving a post; each Pumpy, <i>How to do this</i> or <i>Swap</i> request</td><td>Under OpenAI's API terms (<a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">data controls</a>)</td></tr>
-      <tr><td>Google Gemini (US)</td><td>Audio or video from a post or upload; up to 3 still images. Never your typed text or chats</td><td>When a video has too little written workout</td><td>We delete our upload after each read; anything else under Google's API terms (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">terms</a>)</td></tr>
+      <tr><td>Google Gemini (US)</td><td>Audio or video from a post or upload; up to 3 still images; for a YouTube video, its link, so Gemini can read the public video from YouTube. Never your typed text or chats</td><td>When a video has too little written workout</td><td>We delete our upload after each read; anything else under Google's API terms (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">terms</a>)</td></tr>
       <tr><td>TypeSafe AI's Jev, through Cloudflare Workers AI</td><td>Exercise names, captions, search text, and your Pumpy messages, which may include health details you type, for safety screening; the text of a Pumpy answer you report, to sort it for review. Never images, audio, video or Apple Health data</td><td>Matching, sorting, ranking, safety screening</td><td>Cloudflare lists zero data retention for this model; TypeSafe AI states it does not train on customer data. We keep only Jev's answer and a keyed fingerprint of the input (no text, no account ID) for 90 days</td></tr>
     </tbody>
   </table>
   </div>
   <p>Saving a post can send its caption, description, carousel images, or text you supply to
-    OpenAI to extract exercises. Google Gemini is used for supported audio/video reads, including sampled video frames. Text, coaching and image
+    OpenAI to extract exercises. Google Gemini is used for supported audio/video reads, including sampled video frames.
+    For a YouTube link, our server can give Gemini the link, and Gemini then reads the public video from YouTube. Text, coaching and image
     requests do not automatically fall back to Google. Private uploads can also be processed by Google. Groq is no longer part of
     the active reading workflow.</p>
   <p>Asking Pumpy, tapping <i>How to do this</i>, or <i>Swap or modify</i> also sends an AI
@@ -178,6 +189,13 @@
     it needs them to answer. Account email is not deliberately included in these requests. Text you put in a message,
     exercise detail or selected workout may be included, so avoid adding sensitive information unnecessarily. Pumpy cannot change anything in
     your library until you confirm it in the app.</p>
+  <p><b>Pumpy on your iPhone.</b> On an iPhone that can read videos itself, <i>Add this video's tips to my plan</i>
+    (PocketGym Plus) is worked out on the iPhone. The iPhone reads the card and your next 7 planned days from your
+    account. PocketGym's code ranks the days. Apple's on-device model then picks a day, picks which of the card's
+    exercises to add, and writes one or two sentences. Only those choices, that sentence and the iOS version go to
+    our server. The server builds the change from your saved card and keeps it in your Pumpy chats like any other.
+    Nothing from this goes to OpenAI, Google or TypeSafe AI, and it does not need the AI permission. Nothing changes
+    until you confirm.</p>
   <p>To match exercises, sort shared links, rank searches and keep advice safe, PocketGym also
     sends <a href="https://developers.cloudflare.com/ai/models/typesafe/jev/" target="_blank" rel="noopener">TypeSafe AI's
     Jev</a> model the text those decisions need: exercise names,
@@ -202,7 +220,7 @@
     choose to play handle what you send them under their own policies.</p>
   <p>Data is stored with
     <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> in the
-    United States. Sign-in codes and account emails are sent through
+    United States. The ChatGPT plugin's front door and card pages run on Cloudflare. Sign-in codes and account emails are sent through
     <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a>, which
     receives your email address and the message. Fonts are loaded from Google Fonts and Fontshare.</p>
   <p>Video playback happens in an embedded player from Instagram, TikTok or YouTube. Those
@@ -267,7 +285,7 @@
     <a href="https://www.strava.com/settings/apps" target="_blank" rel="noopener">your Strava
     settings</a>.</p>
 
-  <h2>Apple Health, Apple Watch, widgets and reminders</h2>
+  <h2>Apple Health, Apple Watch, widgets, Spotlight and reminders</h2>
   <p><b>Apple Health.</b> If you turn on Save my workouts (Settings &rsaquo; Connections), PocketGym
     saves each workout you finish to the Health app on your iPhone: when it started and ended, any
     pauses, the kind of workout, the effort you rated and, when no Apple Watch recorded it and you
@@ -294,6 +312,12 @@
     computer backups; files older than a week are deleted the next time you start a workout, and
     all of them are removed if you delete the app. You control widgets, Live Activities and notification
     previews in your device settings.</p>
+  <p><b>Spotlight, Siri and Shortcuts.</b> On iPhone, PocketGym keeps the names of your saved workouts, each with its
+    category and number of exercises, in a file in the app and in the iPhone's own search index, so Spotlight, Siri
+    and the Shortcuts app can find and open them. PocketGym does not send this list anywhere. While a workout is open,
+    PocketGym tells the iPhone which one, so Siri can act on it if you ask. To remove the list, turn off
+    <b>Settings &rsaquo; Data &amp; privacy &rsaquo; Show workouts in Spotlight</b>. It is also removed when you sign
+    out or delete your account.</p>
   <p>If you enable reminders, PocketGym stores a push subscription or Apple push token, its
     association with your account, your timezone and reminder preferences, and delivery state.
     Apple's Push Notification service delivers iPhone notifications. You can turn reminders
@@ -314,12 +338,47 @@
     coaching conversations. When you delete your account, the account link is removed from
     retained earnings records; transaction and payout records may remain for accounting.</p>
 
+  <h2 id="on-device">Reading on your iPhone</h2>
+  <p>On an iPhone that can use Apple Intelligence, with Apple Intelligence turned on and iOS 27 or later, PocketGym
+    can read a workout video on the iPhone itself. The video, its audio and its frames stay on your phone. Apple's
+    speech recognition listens to the audio on the iPhone, Apple's Vision framework reads the text shown on screen,
+    and Apple's on-device language model writes the workout card. When there are few words to go on, the model also
+    looks at a few still frames. PocketGym's own code then checks every exercise and number against what the video
+    says or shows and the post's caption, and leaves out what it cannot find. None of this uses OpenAI, Google or TypeSafe AI, and it does
+    not need the AI permission described in <a href="#ai">AI and Pumpy</a>.</p>
+  <p>This covers a video you pick from Photos or Files in PocketGym, a video file you share to PocketGym, a video you
+    give PocketGym in Siri or Shortcuts, and a TikTok or Instagram link you add in PocketGym or share to it from another app. For a link, PocketGym's
+    server first checks the shared cache below. If the cache has no card, the server fetches the post's public
+    caption, creator name and cover image, as it does for any saved link. If the post has a video, your iPhone then downloads it
+    from TikTok or Instagram, reads it and deletes it. A post with no video is read from its caption, on the iPhone.
+    Every YouTube link, and any other web link, is read on our server as described in
+    <a href="#ai">AI and Pumpy</a>, which needs the AI permission.</p>
+  <p>It also covers one to ten pictures, such as a screenshot or a photo of a whiteboard or a printed program, that you
+    pick in PocketGym or share to it. Apple's Vision framework reads the words in them and Apple's on-device model writes
+    the card, on the iPhone. The pictures stay on your phone.</p>
+  <p>Apart from the link for the cache check and the video download above, what leaves your iPhone is the finished
+    workout card: its title, category, exercises, sets, reps, times, weights, rest, short coaching cues, the moments in the video they come from, and a label saying it was read on an iPhone
+    and on which iOS version. It is saved to your account like any other card, with the link, creator, caption and
+    cover image when it came from a link. The exact words of speech or on-screen text behind each exercise are not
+    sent. Cards read on your iPhone are never added to the shared cache.</p>
+  <p>The card can be wrong, so check the exercises and numbers before you train. Numbers the video did not state are
+    left empty. If you tap <i>Read it on our server instead</i>, the video is read as described in
+    <a href="#ai">AI and Pumpy</a>, which needs the AI permission. To have new videos read on our server instead,
+    turn off <b>Settings &rsaquo; Data &amp; privacy &rsaquo; Read videos on this iPhone</b>. That choice is kept on
+    that iPhone only.</p>
+
   <h2>Files and video reading</h2>
+  <p>This section covers videos read on our server. A video read on your iPhone is covered in
+    <a href="#on-device">Reading on your iPhone</a>.</p>
   <p>Uploads enter private temporary storage. PocketGym's server sends supported audio or video
     to Google Gemini for transcription or workout extraction. PocketGym attempts to delete its
     temporary file and Google's uploaded file after processing, including failed attempts.
     A cleanup sweep targets files left in PocketGym storage after two hours; outages can delay cleanup.
     Extracted text and workout details remain on your saved card.</p>
+  <p>Pictures read on our server (on an iPhone that does not read them itself, or with Read videos on this iPhone
+    turned off) are made smaller and stripped of location and camera details on your phone, and again on our server,
+    before OpenAI reads the workout in them. PocketGym deletes them after the read, including failed attempts, and the
+    same two-hour cleanup sweep targets any left behind. Pictures are never added to the shared cache.</p>
   <p>For public links with little written workout information, PocketGym may also read available
     audio or video, automatically or when you request it. Source material fetched from a public
     post may contribute to the shared cache below. Your private uploads and supplied captions or
@@ -333,10 +392,73 @@
   <h2>Shared extraction cache</h2>
   <p>When a video is read for the first time, the resulting workout is cached under the video's
     public ID so the next person who saves the same video gets it instantly and no AI call is
-    needed. That cache holds only information taken from the public post — never anything about
+    needed. Cards read on an iPhone are never added to it. That cache holds only information taken from the public post — never anything about
     who saved it. It is not linked to any account, so deleting an account does not remove it.
     An entry not updated for 18 months is deleted; a creator can ask us to remove one sooner
-    (see the <a href="terms.html">terms</a>).</p>
+    (see the <a href="terms.html">terms</a>). The ChatGPT plugin keeps its own cards, apart from this cache.
+    See <a href="#chatgpt">PocketGym in ChatGPT</a>.</p>
+
+  <h2 id="chatgpt">PocketGym in ChatGPT</h2>
+  <p>PocketGym is also a plugin inside ChatGPT. This section covers the plugin only. The rest of this page covers the PocketGym app and website. Using the plugin needs no PocketGym account, and it is not linked to one. ChatGPT is run by OpenAI, and OpenAI's own policies cover what ChatGPT keeps.</p>
+  <h3>What the plugin receives</h3>
+  <ul>
+    <li><b>Links you share.</b> A link to a TikTok, an Instagram Reel, a YouTube video or a web page.</li>
+    <li><b>Workout text you share.</b> A caption you paste, text ChatGPT reads from a screenshot you share, the exercises ChatGPT writes down from a video file you attach to your message or from a video's frames (below), or your own description of a workout, up to 4,000 characters at a time. ChatGPT watches a video file you attach; PocketGym receives only the text ChatGPT writes, never the file. Please share only the workout.</li>
+    <li><b>Your words for an adjustment,</b> such as "dumbbells only, 25 minutes" (up to 500 characters). We use them to check the adjusted card and do not keep them.</li>
+    <li><b>The card ChatGPT drafts.</b> The exercises, sets, reps, rest and weights it sends to PocketGym to be checked, with a short quote from the source text for each exercise.</li>
+    <li><b>Anonymous IDs.</b> ChatGPT sends an anonymized user ID and an anonymized conversation ID with each request. They are not your name, email or ChatGPT account. We use them to count and limit requests and to keep a private card with the person who made it. We never store them as received. We store only a one-way hash made with a secret value that only PocketGym's server holds. To stop one source flooding the plugin, we also keep a salted hash of the network address of the server that called us, which is usually OpenAI's server and not your device. If ChatGPT sends neither ID, that hash stands in for them in the counts, and no card is tied to it. The address itself is not stored.</li>
+    <li><b>Things ChatGPT sends that we do not use.</b> Your language, a rough location (city, region, country and time zone) and a description of your browser or app arrive with each request. PocketGym does not read or keep them.</li>
+  </ul>
+  <p>The plugin does not ask for, and we do not collect, your name, email, phone number, password, payment details, ID numbers, precise location, body weight, health records or your ChatGPT conversation.</p>
+  <h3>What we keep, and for how long</h3>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>What</th><th>What is in it</th><th>Why</th><th>How long</th></tr></thead>
+    <tbody>
+      <tr><td>Reads</td><td>The link, the creator's handle, the numbered lines of post text PocketGym fetched, any text you shared, and your hashed ID</td><td>So ChatGPT can write the card from it and PocketGym can check the card against it</td><td>7 days, then deleted by the next nightly clean-up</td></tr>
+      <tr><td>Cards</td><td>The workout (title, exercises, sets, reps, time, rest, weights and cues), the creator's handle, the link to the original post, a short quote of up to 160 characters per exercise from the text it came from, a label saying how it was read, and, for a card made from text you shared or adjusted by ChatGPT, your hashed ID as its owner</td><td>To show the card, let you adjust it and open it as a page, and to reuse cards built only from public post text</td><td>Cards made from text you shared or adjusted by ChatGPT: deleted after 180 days unless you opened them as a card page. Cards built only from public post text: kept, because later reads of the same post reuse them</td></tr>
+      <tr><td>Counts</td><td>An event name, the time, the card or post it relates to, your hashed ID or hashed network address, and the outcome. No text from you</td><td>To run and fix the plugin and see whether people use it and come back</td><td>90 days, by the same nightly clean-up</td></tr>
+      <tr><td>Limit counters</td><td>How many reads, fresh fetches, videos read from their frames, drafts and card events per hashed ID per day, the same per hashed network address, how many fresh reads per platform and videos read from their frames in all per day, how many drafts were rejected for one read or one adjusted card, and whether a platform or frame reading is paused</td><td>To keep within each platform's limits and stop one person using up the day</td><td>30 days</td></tr>
+      <tr><td>Card pages</td><td>The card's public fields (title, exercises, creator, link). Nothing about you</td><td>So you can read and share the card</td><td>Until removed on request</td></tr>
+      <tr><td>Server logs</td><td>Request details that can include IP addresses, kept by Supabase and Cloudflare, our hosts</td><td>To run and secure the service</td><td>Under their log retention</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>We keep text only. We do not keep videos, pictures or audio, including a video we fetch to cut frames from.</p>
+  <h3>Videos read from their frames</h3>
+  <p>When the written text of a TikTok video or an Instagram reel holds no workout, PocketGym may read the video from its frames when you ask about it. Our server fetches the post's public video, the way a browser would, and Cloudflare, which runs that server, cuts 6 to 16 still frames from it. The frames go to ChatGPT in your conversation, where ChatGPT reads them, and what ChatGPT writes down from them is handled like text you share (above). We keep neither the video nor the frames: they exist only in memory while your request is answered, and they are never stored, cached or shown on a card page. Only the post's public link is fetched; nothing about you is sent to the platform. This can be switched off at any time and has daily limits.</p>
+  <h3>Why we use it</h3>
+  <ul>
+    <li>To turn a link into a workout card, check it, show it, let you adjust it and open it as a web page.</li>
+    <li>To show a card built only from public post text to the next person who shares the same link, so the post is not read again.</li>
+    <li>To keep within each platform's limits and stop one person using up the day.</li>
+    <li>To count how many people use the plugin and whether they come back (see Counts below).</li>
+  </ul>
+  <p>We do not use plugin data for advertising, we do not sell it, and we do not use it to train AI models. PocketGym's server makes no AI calls for the plugin. ChatGPT, which is OpenAI's AI, writes the card. The plugin does not use the AI providers listed under AI and Pumpy above.</p>
+  <h3>Who receives it</h3>
+  <ul>
+    <li><b>OpenAI</b>, which runs ChatGPT, receives what you type and share in ChatGPT, and what PocketGym sends back: the card text and, while a card is being drafted, the numbered lines of the post's text, and the still frames of a video read from its frames. OpenAI handles that under its own terms and privacy policy.</li>
+    <li><b>Supabase</b> (United States) hosts the database and the function that runs the plugin.</li>
+    <li><b>Cloudflare</b> delivers the plugin's front door and the card pages, passes requests on to Supabase and makes the address hash described above. When a video is read from its frames, our server on Cloudflare fetches the post's public video and Cloudflare's media service cuts the frames; neither is kept. Supabase and Cloudflare act on our behalf and keep their own request logs.</li>
+    <li><b>TikTok, Instagram, YouTube (Google) and the website</b> you shared a link to. When we read a post, our server asks for the post's public page or public data. The platform sees a request from PocketGym's server for that link. We send nothing about you.</li>
+  </ul>
+  <p>No one else receives it. See also Other services involved above.</p>
+  <h3>Card pages</h3>
+  <p>A card page exists only after you tap the button on a card. Anyone with the link can open it. The link is a random 10-character code and the page asks search engines not to list it, but treat it like any link you share. The page shows the card, credits the creator, links to the original post and links to PocketGym's page on the App Store. A card built from text you shared, or adjusted by ChatGPT, says so on the page. The page sets no cookies and loads nothing from other sites. We count page views and taps on its buttons by card, with nothing about the visitor. Cloudflare, which delivers the page, sees the visitor's IP address as any web host does.</p>
+  <h3>Opening a card in the app</h3>
+  <p>When PocketGym is installed, a card page's link opens the card in the app, where you can save it to Workouts. If that link is the first link a new install of the app opens, within a day of installing, and your PocketGym account is new (made within a day of that link), the account notes once that you came from ChatGPT, with the card's 10-character link code and the date. We use it only to count how many people start using PocketGym from ChatGPT. It sits in your account settings, is part of Export my data and is deleted with your account. Nothing about your ChatGPT conversation reaches the app, and no other app or service is told.</p>
+  <h3>Counts</h3>
+  <p>The plugin counts what happens so we can run it and see whether it works. A count is an event name (for example read, card shown, follow-along opened or finished, page viewed, App Store link tapped), the time, the card or post it relates to, the hashed ID when there is one, and the outcome (for example read, paused or limit reached). Counts hold no text from you. We use the hashed ID to tell how many different people use the plugin and how many come back a week later. We do not link counts to an account, build profiles from them or use them for advertising, and we cannot tell who a hashed ID belongs to.</p>
+  <h3>Your choices</h3>
+  <ul>
+    <li>Do not tap the button and no page is made. Do not share text and none is kept. Remove the plugin in ChatGPT to stop using it.</li>
+    <li>To remove a card page or a card, email us the page's link. If you did not make a page, tell us the creator's handle, the workout's title and roughly when you made it, and we will find it. We cannot search by name or email because the plugin holds neither. We remove it within 30 days of confirming the details, usually sooner.</li>
+    <li>Creators: to remove the cards and pages made from your posts, email us a link to the post.</li>
+    <li>Reads, counts and limit counters delete themselves on the schedule above. They are tied to a hashed ID that you cannot see, so we cannot pull out one person's records on request. The access, correction and deletion rights under Your rights apply to what we can find, which is a card or page you identify.</li>
+    <li>Email <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a> and write "Privacy" in the subject line.</li>
+  </ul>
+  <h3>Age and health</h3>
+  <p>PocketGym is for people 13 and older. The plugin cannot tell how old you are, so its checks apply to everyone: it rejects weight-loss framing and medical claims in cards. The plugin gives no medical advice and does not ask for health information. If you put health details in text you share, that text is kept in the read for up to 7 days like any other text you share, and a card built from it may keep a short quote. Please leave them out.</p>
 
   <h2 id="retention">Retention</h2>
   <div style="overflow-x:auto">
@@ -349,6 +471,7 @@
       <tr><td>Pumpy chats and safety markers</td><td>Until you delete the chat or your account</td></tr>
       <tr><td>A reported Pumpy answer</td><td>Until you delete your account</td></tr>
       <tr><td>Uploads and still frames cut on the phone</td><td>Deleted when the read finishes; a cleanup removes anything left after 2 hours</td></tr>
+      <tr><td>Videos read on your iPhone (the iPhone's own copy)</td><td>Deleted from the iPhone when the read ends. Anything left behind is deleted at the next app start once it is an hour old (a day for a video you shared to PocketGym and have not opened)</td></tr>
       <tr><td>Our upload to Google</td><td>Deleted after the read; anything Google keeps is under its API terms</td></tr>
       <tr><td>Save jobs (the server's record of reading a video for you)</td><td>30 days after the job finishes; deleted with your account</td></tr>
       <tr><td>Reminder registrations</td><td>Until you turn reminders off, the device rejects them, or you delete your account</td></tr>
@@ -368,7 +491,13 @@
       <tr><td>Shared extraction cache (public post data, no account)</td><td>18 months after the entry was last updated</td></tr>
       <tr><td>Cover images of public posts shown on saved cards</td><td>No set period: every card saved from that post shows the same image</td></tr>
       <tr><td>On-iPhone workout journal</td><td>Files older than 7 days are deleted at the next workout</td></tr>
-      <tr><td>Server and sign-in logs (may include IP address), backups</td><td>Kept by Supabase, our host, under its log and backup retention</td></tr>
+      <tr><td>Workout names in the iPhone's search index</td><td>Until you turn off Show workouts in Spotlight, sign out or delete your account</td></tr>
+      <tr><td>ChatGPT plugin reads (post text and text you shared)</td><td>7 days, then deleted by the next nightly clean-up</td></tr>
+      <tr><td>ChatGPT plugin cards</td><td>Made from text you shared or adjusted by ChatGPT: 180 days, unless opened as a card page. Built only from public post text: kept</td></tr>
+      <tr><td>ChatGPT plugin counts (no text; hashed ID)</td><td>90 days, by the same nightly clean-up</td></tr>
+      <tr><td>ChatGPT plugin limit counters</td><td>30 days</td></tr>
+      <tr><td>ChatGPT plugin card pages</td><td>Until removed on request</td></tr>
+      <tr><td>Server and sign-in logs (may include IP address), backups</td><td>Kept by Supabase and Cloudflare, our hosts, under their log and backup retention</td></tr>
     </tbody>
   </table>
   </div>
