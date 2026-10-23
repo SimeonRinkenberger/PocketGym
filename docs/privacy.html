@@ -30,7 +30,7 @@
 <body>
 <main>
   <h1>Privacy</h1>
-  <div class="date">Last updated 21 October 2026 (reading on your iPhone, and pictures)</div>
+  <div class="date">Last updated 22 October 2026 (reading on your iPhone, pictures, and Apple's Private Cloud Compute)</div>
 
   <p>PocketGym (formerly Spotter) is operated by Quarterdeck Collective LLC. This page says plainly what it stores and what it does
     not do. If anything here is unclear, email
@@ -169,6 +169,7 @@
     <thead><tr><th>Provider</th><th>Receives</th><th>When</th><th>Retention</th></tr></thead>
     <tbody>
       <tr><td>OpenAI (US)</td><td>Captions, descriptions, images and text. For Pumpy, <i>How to do this</i> and <i>Swap or modify</i>: your message, an index of your workouts, your planned days, a summary of recent sessions, estimated best lifts, your goal, and your body weight if entered. Not your email</td><td>Saving a post; each Pumpy, <i>How to do this</i> or <i>Swap</i> request</td><td>Under OpenAI's API terms (<a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">data controls</a>)</td></tr>
+      <tr><td>Apple Private Cloud Compute</td><td>For <i>Add this video's tips to my plan</i>, only when it does not fit on the iPhone and only after you say yes once: the card's exercises and a summary of your next 7 planned days</td><td>When the on-device model cannot fit the request</td><td>Not stored by Apple, as Apple describes it</td></tr>
       <tr><td>Google Gemini (US)</td><td>Audio or video from a post or upload; up to 3 still images; for a YouTube video, its link, so Gemini can read the public video from YouTube. Never your typed text or chats</td><td>When a video has too little written workout</td><td>We delete our upload after each read; anything else under Google's API terms (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">terms</a>)</td></tr>
       <tr><td>TypeSafe AI's Jev, through Cloudflare Workers AI</td><td>Exercise names, captions, search text, and your Pumpy messages, which may include health details you type, for safety screening; the text of a Pumpy answer you report, to sort it for review. Never images, audio, video or Apple Health data</td><td>Matching, sorting, ranking, safety screening</td><td>Cloudflare lists zero data retention for this model; TypeSafe AI states it does not train on customer data. We keep only Jev's answer and a keyed fingerprint of the input (no text, no account ID) for 90 days</td></tr>
     </tbody>
@@ -196,6 +197,13 @@
     our server. The server builds the change from your saved card and keeps it in your Pumpy chats like any other.
     Nothing from this goes to OpenAI, Google or TypeSafe AI, and it does not need the AI permission. Nothing changes
     until you confirm.</p>
+  <p><b>Apple's Private Cloud Compute.</b> If your plan is too long for the on-device model, the iPhone can send the
+    same request to Apple's Private Cloud Compute instead: the card's exercises and a summary of your next 7 planned
+    days. PocketGym asks you once before the first request, and you can turn it off in Settings &rsaquo; Data &amp;
+    privacy. Apple runs the request on its own servers and says it does not store it or make it available to anyone,
+    including Apple; PocketGym's server receives only the choices and sentence described above. Apple sets a daily
+    limit, which PocketGym shows wherever it is used. If Apple cannot be reached, the iPhone tries again on the device
+    with a shorter plan. Apple's terms for Apple Intelligence apply.</p>
   <p>To match exercises, sort shared links, rank searches and keep advice safe, PocketGym also
     sends <a href="https://developers.cloudflare.com/ai/models/typesafe/jev/" target="_blank" rel="noopener">TypeSafe AI's
     Jev</a> model the text those decisions need: exercise names,
