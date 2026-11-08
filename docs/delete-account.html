@@ -27,7 +27,7 @@
 <body>
 <main>
   <h1>Delete your PocketGym (formerly Spotter) account</h1>
-  <div class="date">PocketGym, by Quarterdeck Collective LLC &middot; Last updated 2 October 2026</div>
+  <div class="date">PocketGym, by Quarterdeck Collective LLC &middot; Last updated 8 November 2026</div>
 
   <p>This page explains how to delete your PocketGym account and everything in it. You can do it
     yourself inside the app, and you can ask us to do it for you without installing anything.</p>
@@ -78,8 +78,9 @@
       website purchases (PocketGym asks Stripe to delete it);</li>
     <li>your Strava connection, if you made one &mdash; Strava is told to forget PocketGym and both
       access keys are deleted;</li>
-    <li>your customer record at RevenueCat, which checks store purchases for PocketGym &mdash;
-      PocketGym asks RevenueCat to delete it, and keeps asking until RevenueCat confirms;</li>
+    <li>your customer record at RevenueCat, which checks store purchases for PocketGym, with your answer to
+      Apple's tracking prompt and any advertising identifiers it holds &mdash; PocketGym asks RevenueCat to delete
+      it, and keeps asking until RevenueCat confirms;</li>
     <li>your Sign in with Apple authorization, if you used it &mdash; PocketGym asks Apple to revoke
       it;</li>
     <li>the sign-in account itself, so the email address no longer has a PocketGym account.</li>
@@ -101,6 +102,12 @@
     <li><b>Ordinary server logs.</b> Supabase, which runs PocketGym's database and server, keeps
       request and sign-in logs for a limited period for security reasons.</li>
     <li>Backups may hold a copy for a short time until they roll over.</li>
+    <li><b>Events Meta already received, if you allowed tracking.</b> If you tapped Allow in Apple's tracking prompt
+      on iPhone, Meta received app and subscription events from PocketGym and RevenueCat (our
+      <a href="privacy.html">privacy policy</a> lists them). Meta keeps them under its own terms, for up to two years,
+      and deleting your PocketGym account does not delete them. The
+      <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Meta Privacy Policy</a>
+      explains how to manage what apps share with Meta.</li>
   </ul>
 
   <h2>Deleting one thing instead of everything</h2>

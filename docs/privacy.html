@@ -30,12 +30,12 @@
 <body>
 <main>
   <h1>Privacy</h1>
-  <div class="date">Last updated 22 October 2026 (reading on your iPhone, pictures, and Apple's Private Cloud Compute)</div>
+  <div class="date">Last updated 8 November 2026 (crediting creators and measuring our ads with Meta)</div>
 
   <p>PocketGym (formerly Spotter) is operated by Quarterdeck Collective LLC. This page says plainly what it stores and what it does
     not do. If anything here is unclear, email
     <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a>.
-    Washington residents: see our <a href="consumer-health.html">Consumer Health Data Privacy Policy</a>.</p>
+    Washington and Nevada residents: see our <a href="consumer-health.html">Consumer Health Data Privacy Policy</a>.</p>
 
   <h2 id="who">Who we are</h2>
   <p>PocketGym is run by <b>Quarterdeck Collective LLC</b>, a company in the United States. We decide why and
@@ -57,6 +57,9 @@
       real email address behind a private relay. For Apple sign-in, PocketGym also keeps a refresh
       token in server-only storage so it can revoke your Apple authorization when you delete
       your account.</li>
+    <li><b>If you connect TikTok</b>, TikTok's identifier for you in PocketGym, your TikTok username,
+      your display name and your profile picture, and no TikTok access keys. See
+      <a href="#connections">Connections</a>.</li>
     <li><b>The videos you save</b> — the link, the creator name, the caption or description that
       was public on the post, and the workout extracted from it.</li>
     <li><b>What you log</b> — the sets, reps and weights you record in Workout Mode, plus any
@@ -73,15 +76,22 @@
     <li><b>If you subscribe to PocketGym Plus</b>, an identifier for you at your payment provider and the state of
       your subscription — the plan, whether it is running, and the date it renews or ends. Never
       your card. See <a href="#payments">Payments</a> below.</li>
+    <li><b>Your answer to Apple's tracking prompt</b> on iPhone, kept by RevenueCat with your subscription record,
+      and, if you tap Allow, your iPhone's advertising identifiers. See
+      <a href="#meta">Crediting creators and measuring our ads</a>.</li>
   </ul>
 
   <h2>What PocketGym does not do</h2>
   <ul>
-    <li>No ads or advertising trackers, and no third-party web analytics scripts. PocketGym does
-      keep the operational and subscription measurements described below.</li>
+    <li>No ads in the app, and no third-party web analytics scripts. If you allow tracking in Apple's prompt, the
+      iPhone app and RevenueCat share app and subscription events with Meta to credit creators and measure our ads;
+      if you don't, neither sends anything to Meta, and Meta gets only Apple's anonymous ad reports (see
+      <a href="#meta">Crediting creators and measuring our ads</a>).
+      PocketGym also keeps the operational and subscription measurements described below.</li>
     <li>Your library, logs and plan are private to your account and are not sold. Relevant details
       are processed by the service providers described below when you use AI features.</li>
-    <li>The PocketGym app does not collect your location. The ChatGPT plugin receives a rough location from
+    <li>PocketGym doesn't store your location. Each time the iPhone app opens, a check on Cloudflare uses your connection's IP address to tell whether you appear to be in Washington, Nevada or Connecticut, answers yes or no, and keeps nothing. If you allow tracking, Meta receives your IP address (see
+      <a href="#meta">Crediting creators and measuring our ads</a>). The ChatGPT plugin receives a rough location from
       ChatGPT with each request and does not read or keep it (see <a href="#chatgpt">PocketGym in ChatGPT</a>).
       Workout logs are fitness information, and anything
       you type into notes or Pumpy may include health or other sensitive information. Optional
@@ -99,7 +109,7 @@
       <tr><td>Account and sign-in (email, Apple, Google)</td><td>Email; password hash; name; provider ID; account ID</td><td>To give you an account and keep it yours.</td></tr>
       <tr><td>Library, logging, plan, collections, records, goals</td><td>Links and public captions; cards; sessions, sets, reps, weights, notes, effort; plan; goals</td><td>This is the app: it keeps what you ask it to keep.</td></tr>
       <tr><td>AI reading of posts and uploads</td><td>Links, captions, images, text, audio or video, still frames cut on the phone</td><td>To turn a video into a workout card. Only after you allow AI processing.</td></tr>
-      <tr><td>Reading a video on your iPhone (see <a href="#on-device">below</a>)</td><td>The finished card; for a link, also the link and the post's public caption and cover image</td><td>To turn a video into a workout card on your iPhone. No AI provider receives anything, so no AI permission is needed.</td></tr>
+      <tr><td>Reading a video on your iPhone (see <a href="#on-device">below</a>)</td><td>The finished card; for a link, also the link and the post's public caption and cover image</td><td>To turn a video into a workout card on your iPhone. None of our AI providers receives anything, so no AI permission is needed; if you turn on Private Cloud Compute for reading, Apple's Private Cloud Compute writes the card (see <a href="#on-device">below</a>).</td></tr>
       <tr><td>Pumpy, <i>How to do this</i>, <i>Swap or modify</i></td><td>Your messages plus workout context (see <a href="#ai">AI and Pumpy</a>)</td><td>To answer you with your own training in view. Only after you allow AI processing.</td></tr>
       <tr><td><i>Add this video's tips to my plan</i>, on an iPhone that can read videos itself</td><td>The workout and exercises chosen, and Pumpy's sentence</td><td>To add a video's exercises to a planned day once you confirm. Worked out on your iPhone; no AI permission needed.</td></tr>
       <tr><td>Jev: matching, sorting, ranking, safety screening</td><td>Exercise names, captions, search text, Pumpy messages</td><td>To link exercises, sort shared links, rank searches and keep advice safe. Only after you allow AI processing.</td></tr>
@@ -111,7 +121,9 @@
       <tr><td>Reminders</td><td>Push token; time zone; settings</td><td>To send the reminders you turned on.</td></tr>
       <tr><td>Send to Strava</td><td>Workout summary, only when you tap Send</td><td>Because you asked.</td></tr>
       <tr><td>Reviewing a Pumpy answer you report</td><td>A copy of that answer</td><td>To check it and fix what went wrong.</td></tr>
-      <tr><td>Internal measurements (no third-party analytics)</td><td>Feature counts; subscription activity; AI outcomes, timing, errors, costs</td><td>To see what works, what breaks and what it costs.</td></tr>
+      <tr><td>Internal measurements (our own records, not shared)</td><td>Feature counts; subscription activity; AI outcomes, timing, errors, costs</td><td>To see what works, what breaks and what it costs.</td></tr>
+      <tr><td>Crediting creators and measuring our ads, if you allow tracking (see <a href="#meta">below</a>)</td><td>Advertising and device identifiers (IDFA, IDFV, Meta's anonymous ID); IP address; basic device and app information; app installs, opens and time in the app; free trial starts, subscription purchases and renewals with product, price, currency and order number; a hashed account ID</td><td>To see which of our ads and which creators' posts bring people to PocketGym, and credit those creators. Shared with Meta after you tap Allow in Apple's tracking prompt. If you later change your answer, see Stop tracking.</td></tr>
+      <tr><td>Measuring our ads through Apple, on iPhone, whatever you answer in the tracking prompt (see <a href="#meta">below</a>)</td><td>That PocketGym was first opened, and whether a free trial or a paid subscription started on this install, given to Apple's ad attribution on your iPhone</td><td>So Apple can tell Meta, with nothing that identifies you, that an install from one of our ads started a trial or a subscription. Only the first opening for anyone who has told PocketGym they are under 18, or whose connection appears to be in Washington, Nevada or Connecticut.</td></tr>
       <tr><td>Shared extraction cache</td><td>Public post information, not linked to any account</td><td>So a video read once is ready at once for the next person, without another AI call.</td></tr>
       <tr><td>Legal duties (rights requests, age rules)</td><td>As the request or the law requires</td><td>Because the law requires it.</td></tr>
       <tr><td>ChatGPT plugin: reading a link, checking and showing a card</td><td>The link; public post text; text you share in ChatGPT; a hashed ID; the card</td><td>To turn a link into a checked workout card. See <a href="#chatgpt">PocketGym in ChatGPT</a>.</td></tr>
@@ -147,18 +159,21 @@
       session or a saved workout.</li>
     <li><b><a href="#delete">Delete account</a></b> removes everything.</li>
   </ul>
-  <p><b>Never for advertising.</b> There are no ads and no trackers, and we don't sell health information or use it
-    for marketing.</p>
+  <p><b>Never for advertising.</b> PocketGym shows no ads. Health information is never shared with Meta or any other
+    advertiser, never sold and never used for marketing. If you allow tracking, Meta receives the app and subscription
+    events described in <a href="#meta">Crediting creators and measuring our ads</a>, which hold none of the health
+    information listed above, and neither do Apple's anonymous ad reports described there.</p>
   <p><b>Apple Health and Apple Watch stay on your devices.</b> On iPhone, PocketGym only writes finished workouts to
     Apple Health and never reads it. The Watch reads heart rate and active energy during a workout to show them on
     your watch and phone. Nothing from Apple Health, and no heart-rate value, goes to our servers or to AI.</p>
 
   <h2 id="ai">AI and Pumpy</h2>
-  <p><b>Pumpy is an AI, not a person.</b> OpenAI's model writes its answers, except for the one iPhone action
+  <p><b>Pumpy is an AI, not a person.</b> A model from Anthropic (Claude) or OpenAI writes its answers, except for the one iPhone action
     described below. AI can be wrong, so check before you
-    train. Pumpy is not medical advice, and it can't change your library or plan until you confirm. We use three AI
-    providers, and only after you allow AI processing. Our server refuses requests to any other AI host. Reading a
-    video on your iPhone uses Apple's models on the iPhone itself and sends nothing to these providers. See
+    train. Pumpy is not medical advice, and it can't change your library or plan until you confirm. We use four AI
+    providers, Anthropic, OpenAI, Google and TypeSafe AI, and only after you allow AI processing. Anthropic is used only if the AI permission you allowed names it. Our server refuses requests to any other AI host. Reading a
+    video on your iPhone uses Apple's models on the iPhone itself, or Apple's Private Cloud Compute if you turn it on,
+    and sends nothing to these providers. See
     <a href="#on-device">Reading on your iPhone</a>.</p>
   <p>PocketGym asks for permission before using AI features. You can decline and keep logging
     workouts and planning manually. In Settings, you can review or turn off AI processing.
@@ -168,15 +183,16 @@
   <table>
     <thead><tr><th>Provider</th><th>Receives</th><th>When</th><th>Retention</th></tr></thead>
     <tbody>
-      <tr><td>OpenAI (US)</td><td>Captions, descriptions, images and text. For Pumpy, <i>How to do this</i> and <i>Swap or modify</i>: your message, an index of your workouts, your planned days, a summary of recent sessions, estimated best lifts, your goal, and your body weight if entered. Not your email</td><td>Saving a post; each Pumpy, <i>How to do this</i> or <i>Swap</i> request</td><td>Under OpenAI's API terms (<a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">data controls</a>)</td></tr>
-      <tr><td>Apple Private Cloud Compute</td><td>For <i>Add this video's tips to my plan</i>, only when it does not fit on the iPhone and only after you say yes once: the card's exercises and a summary of your next 7 planned days</td><td>When the on-device model cannot fit the request</td><td>Not stored by Apple, as Apple describes it</td></tr>
+      <tr><td>Anthropic (US)</td><td>Captions, descriptions, images and text. For Pumpy, <i>How to do this</i> and <i>Swap or modify</i>: your message, an index of your workouts, your planned days, a summary of recent sessions, estimated best lifts, your goal, and your body weight if entered. Not your email</td><td>Saving a post; each Pumpy, <i>How to do this</i> or <i>Swap</i> request, once you have allowed AI processing with the permission that names Anthropic. Anthropic answers first; OpenAI answers when it cannot</td><td>Anthropic deletes API inputs and outputs within 30 days, and keeps them longer only to enforce its usage policy or where the law requires (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener">retention</a>)</td></tr>
+      <tr><td>OpenAI (US)</td><td>Captions, descriptions, images and text. For Pumpy, <i>How to do this</i> and <i>Swap or modify</i>: your message, an index of your workouts, your planned days, a summary of recent sessions, estimated best lifts, your goal, and your body weight if entered. Not your email</td><td>Saving a post; each Pumpy, <i>How to do this</i> or <i>Swap</i> request, when Anthropic cannot answer or the AI permission you allowed does not name Anthropic</td><td>Under OpenAI's API terms (<a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">data controls</a>)</td></tr>
+      <tr><td>Apple Private Cloud Compute</td><td>For reading a video or pictures, only after you turn it on: what the iPhone heard and read, and up to four still frames or pictures when there are few words. For <i>Add this video's tips to my plan</i>, only when it does not fit on the iPhone and only after you say yes once: the card's exercises and a summary of your next 7 planned days</td><td>Each read while it is on; a tips request the on-device model cannot fit</td><td>Not stored by Apple, as Apple describes it</td></tr>
       <tr><td>Google Gemini (US)</td><td>Audio or video from a post or upload; up to 3 still images; for a YouTube video, its link, so Gemini can read the public video from YouTube. Never your typed text or chats</td><td>When a video has too little written workout</td><td>We delete our upload after each read; anything else under Google's API terms (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">terms</a>)</td></tr>
       <tr><td>TypeSafe AI's Jev, through Cloudflare Workers AI</td><td>Exercise names, captions, search text, and your Pumpy messages, which may include health details you type, for safety screening; the text of a Pumpy answer you report, to sort it for review. Never images, audio, video or Apple Health data</td><td>Matching, sorting, ranking, safety screening</td><td>Cloudflare lists zero data retention for this model; TypeSafe AI states it does not train on customer data. We keep only Jev's answer and a keyed fingerprint of the input (no text, no account ID) for 90 days</td></tr>
     </tbody>
   </table>
   </div>
   <p>Saving a post can send its caption, description, carousel images, or text you supply to
-    OpenAI to extract exercises. Google Gemini is used for supported audio/video reads, including sampled video frames.
+    Anthropic or OpenAI to extract exercises. Google Gemini is used for supported audio/video reads, including sampled video frames.
     For a YouTube link, our server can give Gemini the link, and Gemini then reads the public video from YouTube. Text, coaching and image
     requests do not automatically fall back to Google. Private uploads can also be processed by Google. Groq is no longer part of
     the active reading workflow.</p>
@@ -195,7 +211,7 @@
     account. PocketGym's code ranks the days. Apple's on-device model then picks a day, picks which of the card's
     exercises to add, and writes one or two sentences. Only those choices, that sentence and the iOS version go to
     our server. The server builds the change from your saved card and keeps it in your Pumpy chats like any other.
-    Nothing from this goes to OpenAI, Google or TypeSafe AI, and it does not need the AI permission. Nothing changes
+    Nothing from this goes to Anthropic, OpenAI, Google or TypeSafe AI, and it does not need the AI permission. Nothing changes
     until you confirm.</p>
   <p><b>Apple's Private Cloud Compute.</b> If your plan is too long for the on-device model, the iPhone can send the
     same request to Apple's Private Cloud Compute instead: the card's exercises and a summary of your next 7 planned
@@ -224,11 +240,15 @@
   <p>Every service provider named on this page receives only what it needs to do its job for
     PocketGym, and is bound by its terms with PocketGym to use that data only to provide its service
     and to protect it at least as well as this policy describes. None of them may sell it or use it
-    for advertising. Strava, which you connect yourself, and the video platforms whose players you
-    choose to play handle what you send them under their own policies.</p>
+    for advertising of their own. RevenueCat also sends Meta the subscription events of people who allow tracking, for
+    PocketGym. Meta is not one of these service providers: what it receives if you allow tracking, and how it may use
+    it, is in <a href="#meta">Crediting creators and measuring our ads</a>. Strava, which you connect yourself, and the
+    video platforms whose players you choose to play handle what you send them under their own policies.</p>
   <p>Data is stored with
     <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> in the
-    United States. The ChatGPT plugin's front door and card pages run on Cloudflare. Sign-in codes and account emails are sent through
+    United States. The ChatGPT plugin's front door and card pages run on Cloudflare, and so does the check the iPhone
+    app makes to see whether tracking may be offered where you are. Our check keeps nothing and its logs are off; Cloudflare may keep its own security records (see
+    <a href="#meta">Crediting creators and measuring our ads</a>). Sign-in codes and account emails are sent through
     <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a>, which
     receives your email address and the message. Fonts are loaded from Google Fonts and Fontshare.</p>
   <p>Video playback happens in an embedded player from Instagram, TikTok or YouTube. Those
@@ -252,16 +272,16 @@
     from the law where you live, and US courts and authorities may be able to access data held there.</p>
   <ul>
     <li><b>Canada:</b> our US service providers are bound by contract to protect your information and use it only
-      for PocketGym. While it is in the United States, US courts and authorities may access it.</li>
+      for PocketGym. While it is in the United States, US courts and authorities may access it. If you allow tracking, Meta, in the United States, receives the information described in <a href="#meta">Crediting creators and measuring our ads</a>. Meta is not our service provider and uses it under its own terms, and US courts and authorities may access it there.</li>
     <li><b>Australia:</b> we are likely to disclose your personal information to recipients in the United States,
-      and possibly other countries where our providers operate. We take reasonable steps so they handle it
-      consistently with the Australian Privacy Principles.</li>
+      and possibly other countries where our providers operate. We take reasonable steps so our service providers handle it
+      consistently with the Australian Privacy Principles. This does not cover Meta. If you allow tracking, you consent to that disclosure knowing Meta decides for itself how it uses the information, that we cannot ensure it follows the Australian Privacy Principles, and that you may not be able to seek redress against it under the Australian Privacy Act.</li>
     <li><b>New Zealand:</b> our overseas providers act only on our behalf, and we stay responsible for your
-      information under the Privacy Act 2020.</li>
+      information under the Privacy Act 2020. Meta does not act only on our behalf. If you allow tracking, you authorise that disclosure knowing Meta may not be required to protect your information in a way comparable to the Privacy Act 2020.</li>
   </ul>
 
   <h2 id="payments">Payments</h2>
-  <p>In the native Android and iPhone apps, purchases are handled by Google Play or Apple. RevenueCat validates purchases and synchronizes subscription access with your PocketGym account. RevenueCat receives your PocketGym account ID, purchase history, product and transaction identifiers, subscription status, and technical information needed to process purchases. It does not receive your workout library or coaching conversations. Payment-card details stay with the store. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s privacy policy</a>.</p>
+  <p>In the native Android and iPhone apps, purchases are handled by Google Play or Apple. RevenueCat validates purchases and synchronizes subscription access with your PocketGym account. RevenueCat receives your PocketGym account ID, purchase history, product and transaction identifiers, subscription status, and technical information needed to process purchases. It does not receive your workout library or coaching conversations. On iPhone, RevenueCat also records your answer to Apple's tracking prompt; if you tap Allow, it receives your iPhone's advertising identifier (IDFA), its identifier for PocketGym (IDFV), Meta's anonymous ID and your IP address, and sends Meta your free trial starts, subscription purchases and renewals (see <a href="#meta">Crediting creators and measuring our ads</a>). Payment-card details stay with the store. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s privacy policy</a>.</p>
   <p>Store subscriptions renew until cancelled in Google Play or Apple subscription settings. Deleting your PocketGym account or uninstalling the app does not cancel store subscriptions. Cancel in the store first if you want billing to stop. Store providers may retain transaction records required for tax, accounting, fraud prevention, and legal obligations.</p>
   <p><b>PocketGym no longer sells subscriptions on the web.</b> Web purchases through
     <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a> ended on 18 September 2026,
@@ -292,6 +312,17 @@
     deleting your account. You can also revoke PocketGym yourself at any time from
     <a href="https://www.strava.com/settings/apps" target="_blank" rel="noopener">your Strava
     settings</a>.</p>
+  <p>PocketGym can also connect to <a href="https://www.tiktok.com/legal/page/us/privacy-policy/en" target="_blank"
+    rel="noopener">TikTok</a>, if you choose to, in Settings &rarr; Connections. TikTok asks you to approve
+    sharing your profile with PocketGym. PocketGym's server then reads, once, four things: TikTok's identifier
+    for you in PocketGym, your username, your display name and your profile picture. It keeps those four on a
+    row attached to your account <b>on the server only</b>, to show your TikTok in Settings and, if you are a
+    creator who works with PocketGym, to recognise you on PocketGym's creator list (see
+    <a href="#creators">PocketGym creators</a>). PocketGym does not read your videos, followers, likes or
+    messages, and none of this goes to the AI services above.</p>
+  <p><b>PocketGym keeps no TikTok access keys.</b> As soon as it has read those four things it gives the
+    permission back to TikTok, so PocketGym cannot read anything more and no longer appears in your TikTok
+    app permissions. <b>Disconnecting in Settings deletes the row</b>, and so does deleting your account.</p>
 
   <h2>Apple Health, Apple Watch, widgets, Spotlight and reminders</h2>
   <p><b>Apple Health.</b> If you turn on Save my workouts (Settings &rsaquo; Connections), PocketGym
@@ -338,21 +369,100 @@
     summarize saves, completed workouts, use of features and subscription activity. These
     records can be linked to your account while it exists, and are kept for the periods in
     <a href="#retention">Retention</a>. RevenueCat also processes purchase
-    information for subscription analytics.</p>
+    information for subscription analytics and, if you allow tracking, sends trial starts, purchases and renewals to Meta
+    (see <a href="#meta">Crediting creators and measuring our ads</a>).</p>
   <p>If you redeem a creator's offer code in the App Store or Google Play, the store tells
     PocketGym which code was used. PocketGym records it with qualifying subscription
     transactions so it can account for creator earnings.
     Creator reporting shows aggregate counts and earnings rather than your workout library or
     coaching conversations. When you delete your account, the account link is removed from
     retained earnings records; transaction and payout records may remain for accounting.</p>
+  <p id="creators"><b>PocketGym creators.</b> Creators who work with PocketGym through Trybe are on
+    PocketGym's creator list. From Trybe, PocketGym keeps only Trybe's identifier for each creator, the date
+    they joined, and the TikTok and Instagram usernames the creator gave Trybe: no names, photos, contact
+    details or earnings. When a creator connects TikTok and the username TikTok confirms is on the list, their
+    account is marked as a PocketGym creator, and may receive PocketGym Plus and a creator code under their
+    agreement with PocketGym. While that lasts, the list entry also notes which PocketGym account and which
+    TikTok identifier claimed it, and when; those two are removed as soon as the claim ends (disconnecting,
+    deleting the account, or leaving the list). PocketGym keeps a record of these steps (when, and what
+    changed, with no names) for 24 months, and deletes a creator's list entry 90 days after they stop working
+    with PocketGym.</p>
+
+  <h2 id="meta">Crediting creators and measuring our ads (Meta)</h2>
+  <p>PocketGym advertises on Facebook and Instagram, which Meta runs, often with posts by the fitness creators whose
+    workouts people save. From version 1.2, the iPhone app can share some information with Meta so we can see which
+    of our ads and which creators' posts bring people to PocketGym, credit those creators, and measure our ads.
+    PocketGym shows no ads in the app.</p>
+  <p><b>Your choice, in Apple's prompt.</b> When a workout card you saved is ready, PocketGym explains, once, what it
+    shares with Meta and why, and then shows Apple's tracking prompt. If you tap <b>Allow</b>, the app and RevenueCat send Meta the
+    information below. If you tap <b>Ask App Not to Track</b>, or tracking is off on your iPhone, nothing is sent to
+    Meta by the app or by RevenueCat, and neither sends anything before you answer. (If you allowed tracking on an earlier install, RevenueCat may still hold that answer: see below.) Apple's own ad measurement,
+    below, works whatever you answer. You can change your answer at any time in
+    <b>iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking</b>. Once tracking is off, the app sends Meta
+    nothing more. RevenueCat goes by the last answer it heard and keeps sending your subscription events, including renewals, until it hears the new one. It hears when you open PocketGym, signed in, for about ten seconds; if you reinstalled PocketGym after allowing tracking, only when you next open the subscription screen. If you deleted the app and keep paying, it never hears, and renewals can go on reaching Meta until you cancel the subscription or delete your PocketGym account (by email if you no longer have the app). PocketGym works
+    the same whichever you choose. The Android app, the website and the ChatGPT plugin send nothing to Meta.</p>
+  <p><b>Where and for whom tracking isn't offered.</b> PocketGym doesn't ask, and doesn't start Meta's software kit,
+    if you have told PocketGym you are under 18 (in a chat with Pumpy, or by answering No to &ldquo;Are you 18 or
+    older?&rdquo;), if Pumpy's safety check reads you as under 18, or if your connection is in Washington, Nevada or
+    Connecticut: located by your connection's IP address, at the moment the app checks, by our hosting provider
+    Cloudflare; not stored. If the chat where you said you are under 18 is deleted, PocketGym no longer knows, and may ask. Those states have specific laws on consumer health data, so out of caution we don't offer tracking there. The app checks each time it opens or comes back to the screen, and if the place can't be
+    told, tracking stays off. Location by IP address can be wrong, for example behind a VPN. If you had allowed
+    tracking before, the app stops Meta's software kit as soon as it checks; one app opening may reach Meta before
+    that, and RevenueCat, which still holds your earlier answer and identifiers, may send Meta a later free trial
+    start or first subscription purchase, and each renewal while your subscription runs. For everyone in this paragraph, the app gives Apple's own ad measurement
+    (below) only that PocketGym was first opened.</p>
+  <p><b>What Meta receives if you tap Allow:</b></p>
+  <ul>
+    <li><b>Identifiers:</b> your iPhone's advertising identifier (IDFA), Apple's identifier for PocketGym on your
+      iPhone (IDFV), Meta's anonymous ID for the app on your iPhone, and your IP address.</li>
+    <li><b>From the app, through Meta's software kit:</b> that PocketGym was installed, each time it opens and how
+      long it stays open, and technical events about Meta's software kit itself (such as that it started), each with
+      basic information about your iPhone and the app (such as the iPhone model, the iOS and app versions, language,
+      time zone, mobile carrier and screen size); and a crash report if Meta's own code in the app crashes, which
+      Meta says holds no user data.</li>
+    <li><b>From RevenueCat's servers:</b> when you start a free trial, when you buy a subscription or a trial turns paid, and each time a subscription renews, with
+      the product, its price
+      and currency, the order number, a scrambled (hashed) form of your PocketGym account ID, the identifiers above,
+      and the app version, iOS version and language.</li>
+  </ul>
+  <p><b>What Meta never receives from PocketGym:</b> your workouts, logs, plan or goals; your body weight or any other
+    health information; anything from Apple Health or your Apple Watch; your chats with Pumpy; the videos, pictures or
+    links you save, or the workout cards made from them; the titles or contents of the screens you use (Meta's software kit does attach the app's internal code name for the window on top when an event fires, such as SpotterViewController); your name, email address
+    or phone number. The app sends Meta no events other than those above.</p>
+  <p><b>Apple's own ad measurement, whatever you answer.</b> On iPhone, PocketGym also uses Apple's ad attribution
+    system (SKAdNetwork), which Apple lets apps use without the tracking prompt. The app tells Apple, on your iPhone,
+    that PocketGym was first opened, and whether a free trial or a paid subscription started on that install. If you
+    installed PocketGym from one of our ads on Facebook or Instagram, Apple then tells Meta, a day or more later, that
+    an install from that ad was opened and whether it started a trial or a subscription; when enough installs are
+    counted together, Apple's report can also say which of our campaigns it was, where the ad ran, and the country.
+    Apple sends these reports, not PocketGym, and Apple says they hold no data about you or your iPhone: no name,
+    account, email or advertising identifier. For an install that did not come from a Meta ad, Meta gets nothing.
+    This happens whether or not you allow tracking, except that for anyone tracking isn't offered to (above), the app
+    gives Apple only that PocketGym was first opened, never a trial or a subscription. The Android app does nothing
+    like it.</p>
+  <p><b>How Meta uses it.</b> Meta uses this information to report to us on how our ads perform and to deliver and
+    improve our ads. Under its <a href="https://www.facebook.com/legal/terms/businesstools" target="_blank"
+    rel="noopener">Business Tools Terms</a>, Meta can also use it for its own purposes, such as personalizing the ads
+    and other content it shows you on and off Facebook and Instagram and improving its products, and it may keep this
+    event data for up to two years. Unlike the service providers named elsewhere on this page, Meta decides for itself
+    how it uses this information, under the <a href="https://www.facebook.com/privacy/policy" target="_blank"
+    rel="noopener">Meta Privacy Policy</a>, which also explains how to see and manage what apps share with Meta. To opt out of ad targeting, turn tracking off as described under Your rights, and use Your activity off Meta technologies in Meta's Accounts Center.</p>
+  <p><b>RevenueCat's part.</b> RevenueCat, which handles PocketGym's subscriptions (see <a href="#payments">Payments</a>),
+    records your answer to Apple's prompt. If you tapped Allow, it keeps the identifiers above with your subscription
+    record and sends Meta your free trial start, your subscription purchase and each renewal for PocketGym. If you did not,
+    it sends
+    nothing to Meta. If you turn tracking off later, it stops once it hears the new answer, as described above. Meta's anonymous ID is then deleted from your record, and the other identifiers stay with it until you delete your
+    account. PocketGym's own server does not keep these identifiers. See
+    <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's privacy policy</a>.</p>
 
   <h2 id="on-device">Reading on your iPhone</h2>
   <p>On an iPhone that can use Apple Intelligence, with Apple Intelligence turned on and iOS 27 or later, PocketGym
-    can read a workout video on the iPhone itself. The video, its audio and its frames stay on your phone. Apple's
+    can read a workout video on the iPhone itself. The video and its audio stay on your phone, and so do its frames
+    unless you turn on Private Cloud Compute for reading (below). Apple's
     speech recognition listens to the audio on the iPhone, Apple's Vision framework reads the text shown on screen,
     and Apple's on-device language model writes the workout card. When there are few words to go on, the model also
     looks at a few still frames. PocketGym's own code then checks every exercise and number against what the video
-    says or shows and the post's caption, and leaves out what it cannot find. None of this uses OpenAI, Google or TypeSafe AI, and it does
+    says or shows and the post's caption, and leaves out what it cannot find. None of this uses Anthropic, OpenAI, Google or TypeSafe AI, and it does
     not need the AI permission described in <a href="#ai">AI and Pumpy</a>.</p>
   <p>This covers a video you pick from Photos or Files in PocketGym, a video file you share to PocketGym, a video you
     give PocketGym in Siri or Shortcuts, and a TikTok or Instagram link you add in PocketGym or share to it from another app. For a link, PocketGym's
@@ -363,14 +473,22 @@
     <a href="#ai">AI and Pumpy</a>, which needs the AI permission.</p>
   <p>It also covers one to ten pictures, such as a screenshot or a photo of a whiteboard or a printed program, that you
     pick in PocketGym or share to it. Apple's Vision framework reads the words in them and Apple's on-device model writes
-    the card, on the iPhone. The pictures stay on your phone.</p>
-  <p>Apart from the link for the cache check and the video download above, what leaves your iPhone is the finished
+    the card, on the iPhone. The pictures stay on your phone unless you turn on Private Cloud Compute for reading
+    (below).</p>
+  <p>Apart from the link for the cache check, the video download above and Private Cloud Compute if you turn it on
+    (below), what leaves your iPhone is the finished
     workout card: its title, category, exercises, sets, reps, times, weights, rest, short coaching cues, the moments in the video they come from, and a label saying it was read on an iPhone
     and on which iOS version. It is saved to your account like any other card, with the link, creator, caption and
     cover image when it came from a link. The exact words of speech or on-screen text behind each exercise are not
     sent. Cards read on your iPhone are never added to the shared cache.</p>
+  <p><b>Apple's Private Cloud Compute.</b> If you turn on Private Cloud Compute for reading, what PocketGym hears and
+    reads in a video or in your pictures on your iPhone, and a few still frames or pictures when there are few words,
+    is sent to Apple's Private Cloud Compute to write the card; Apple processes it and does not store it, it never
+    reaches PocketGym's servers, the video and its sound stay on your iPhone, and only the finished card is saved to
+    your account. PocketGym asks before the first read that would use it, and you can turn it off in
+    <b>Settings &rsaquo; Data &amp; privacy &rsaquo; Read with Private Cloud Compute</b>.</p>
   <p>The card can be wrong, so check the exercises and numbers before you train. Numbers the video did not state are
-    left empty. If you tap <i>Read it on our server instead</i>, the video is read as described in
+    left empty, or marked as Pumpy's suggestion. If you tap <i>Read it on our server instead</i>, the video is read as described in
     <a href="#ai">AI and Pumpy</a>, which needs the AI permission. To have new videos read on our server instead,
     turn off <b>Settings &rsaquo; Data &amp; privacy &rsaquo; Read videos on this iPhone</b>. That choice is kept on
     that iPhone only.</p>
@@ -385,7 +503,7 @@
     Extracted text and workout details remain on your saved card.</p>
   <p>Pictures read on our server (on an iPhone that does not read them itself, or with Read videos on this iPhone
     turned off) are made smaller and stripped of location and camera details on your phone, and again on our server,
-    before OpenAI reads the workout in them. PocketGym deletes them after the read, including failed attempts, and the
+    before Anthropic or OpenAI reads the workout in them. PocketGym deletes them after the read, including failed attempts, and the
     same two-hour cleanup sweep targets any left behind. Pictures are never added to the shared cache.</p>
   <p>For public links with little written workout information, PocketGym may also read available
     audio or video, automatically or when you request it. Source material fetched from a public
@@ -393,6 +511,7 @@
     HTML are excluded from new shared cache entries.</p>
   <p>Deleting a temporary uploaded file does not erase a provider's separate processing or abuse
     monitoring records. Provider handling depends on the account and service configuration; see
+    <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener">Anthropic's retention</a>,
     <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">OpenAI's data controls</a>
     and <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google's API terms</a>.
     In particular, Google's paid and unpaid services have different data-use terms.</p>
@@ -484,7 +603,12 @@
       <tr><td>Save jobs (the server's record of reading a video for you)</td><td>30 days after the job finishes; deleted with your account</td></tr>
       <tr><td>Reminder registrations</td><td>Until you turn reminders off, the device rejects them, or you delete your account</td></tr>
       <tr><td>Subscription status</td><td>Until you delete your account</td></tr>
+      <tr><td>Your answer to Apple's tracking prompt, and the identifiers RevenueCat keeps if you tap Allow</td><td>With your subscription record at RevenueCat until you delete your account (PocketGym asks RevenueCat to delete it)</td></tr>
+      <tr><td>Events Meta receives if you allow tracking</td><td>Up to two years, under Meta's Business Tools Terms. Turning tracking off stops new events (RevenueCat's once it hears the new answer); deleting your PocketGym account does not delete what Meta already has (see <a href="#meta">Crediting creators and measuring our ads</a>)</td></tr>
       <tr><td>Strava keys</td><td>Until you disconnect or delete your account</td></tr>
+      <tr><td>TikTok connection (identifier, username, display name, profile picture; no keys)</td><td>Until you disconnect or delete your account</td></tr>
+      <tr><td>PocketGym's creator list (Trybe's identifier and the creator's TikTok and Instagram usernames)</td><td>While the creator works with PocketGym, then 90 days</td></tr>
+      <tr><td>Creator program record (connections, claims and changes; no names)</td><td>24 months; your account ID is removed when you delete your account</td></tr>
       <tr><td>Apple sign-in token</td><td>Until you delete your account (revoked at Apple first)</td></tr>
       <tr><td>Save and coaching counters</td><td>13 months; deleted with your account</td></tr>
       <tr><td>AI cost ledger (provider, model, tokens, cost)</td><td>13 months; your account ID is removed when you delete your account</td></tr>
@@ -519,6 +643,10 @@
     <li><b>Delete:</b> Settings &rsaquo; Data &amp; privacy &rsaquo; Delete account, or delete single items. If you
       can't sign in, email us from your account's address; we erase it within 30 days of confirming it's you.</li>
     <li><b>Stop AI processing:</b> Settings &rsaquo; Data &amp; privacy &rsaquo; AI processing.</li>
+    <li><b>Stop tracking:</b> iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking, then turn off PocketGym.
+      The app sends Meta nothing more. Then open PocketGym once, signed in, for about ten seconds, so RevenueCat stops too. If you no longer have the app, cancel your subscription or email us to delete your account, because renewals can otherwise keep reaching Meta. For what Meta already has,
+      use the controls the <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Meta
+      Privacy Policy</a> describes.</li>
     <li><b>Anything else:</b> <a href="mailto:business@quarterdeckcollective.com">business@quarterdeckcollective.com</a>.
       We may ask you to confirm the request comes from your account's email. Requests are free.</li>
   </ul>
@@ -535,17 +663,31 @@
     days. You can complain to the Privacy Commissioner
     (<a href="https://www.privacy.org.nz" target="_blank" rel="noopener">privacy.org.nz</a>).</p>
   <h3>United States</h3>
-  <p>We don't sell your personal information or share it for targeted advertising. That includes residents of
-    Nevada and Washington: we do not sell covered information or consumer health data. Washington residents: see
+  <p>If you allow tracking in Apple's prompt, we share the app
+    and subscription events described in <a href="#meta">Crediting creators and measuring our ads</a> with Meta, and
+    Meta may also use your app activity for its own advertising, which some state laws call a sale or sharing for
+    targeted advertising. The app sends almost all its events to Meta with Meta's Limited Data Use setting on: for people Meta
+    places in a US state whose privacy law that setting covers, Meta limits how it uses them. RevenueCat's trial,
+    subscription and renewal events don't carry that setting. You can stop it any time: tap <b>Ask App Not to Track</b>, or turn tracking off in
+    <b>iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking</b>; then the app shares nothing more with Meta, and RevenueCat stops once it hears the new answer (see Stop tracking under Your rights).
+    Tracking isn't offered when your connection appears to be in Washington, Nevada or Connecticut, or to anyone who has told PocketGym they are under
+    18 (see <a href="#meta">Crediting creators and measuring our ads</a>). Apple's anonymous ad reports, which hold nothing that identifies
+    you, go on either way (see <a href="#meta">Apple's own ad measurement</a>). We never share health information for
+    advertising. Nevada and
+    Washington residents: we do not exchange covered information for money, and we do not sell the data listed in our Consumer Health Data Privacy Policy. Washington and Nevada residents: see
     our <a href="consumer-health.html">Consumer Health Data Privacy Policy</a>. Wherever you live, you can use the
-    export, correction and deletion options above.</p>
+    export, correction and deletion options above. Our website has no advertising trackers, so a Global Privacy Control signal has nothing to switch off; on iPhone, Apple's tracking setting does that job.</p>
 
   <h2 id="children">Children and teens</h2>
-  <p>PocketGym is for people 13 and older. If we learn someone under 13 has an account, we delete it. Email us if you
+  <p>PocketGym is for people 13 and older. If you tell us an account belongs to someone under 13, we delete it. Email us if you
     think a child under 13 is using PocketGym.</p>
   <p><b>Under 18:</b> Pumpy won't set a weight-loss goal for anyone who says they are under 18, and offers a strength
     goal instead. Weight-loss plans ask &ldquo;Are you 18 or older?&rdquo; and need a &ldquo;Yes&rdquo;. We remember an
     under-18 statement for the whole conversation.</p>
+  <p><b>Tracking:</b> PocketGym doesn't ask anyone who has told it they are under 18, or whom Pumpy's safety check
+    reads as under 18, to allow tracking, and doesn't start Meta's software kit for them (see
+    <a href="#meta">Crediting creators and measuring our ads</a>, which also says what happens if they had allowed it
+    before). If the chat where they said so is deleted, PocketGym no longer knows, and may ask. Apple's own anonymous ad measurement gets only that PocketGym was first opened.</p>
   <p><b>App-store age signals:</b> some US states (for example Texas, Utah and Louisiana) require apps to use the app
     stores' age range and parental-consent signals. Support for these signals is being added to PocketGym. When it
     arrives, we will use them only to apply age rules, meet the law and keep users safe, and delete them once used.</p>
@@ -576,8 +718,10 @@
       in the store separately;</li>
     <li>your Strava connection, if you made one — Strava is told to forget PocketGym and both
       access keys are deleted;</li>
-    <li>your customer record at RevenueCat — PocketGym asks RevenueCat to delete it, and keeps
-      asking until RevenueCat confirms;</li>
+    <li>your TikTok connection, if you made one: its identifier, username, name and picture (PocketGym
+      holds no TikTok keys, so there is nothing to revoke), and any Creator Plus it carried;</li>
+    <li>your customer record at RevenueCat, with your answer to Apple's tracking prompt and any advertising
+      identifiers it holds — PocketGym asks RevenueCat to delete it, and keeps asking until RevenueCat confirms;</li>
     <li>your Apple sign-in authorization, if connected — PocketGym asks Apple to revoke the
       stored grants and then deletes those tokens. You may need to sign in with Apple again
       first if the account was connected before token revocation was available;</li>
@@ -585,6 +729,8 @@
   </ul>
   <p>Export your data first if you want to keep it. Account deletion cannot be undone in the app.
     Backup copies and provider security records may remain under their separate retention policies.
+    If you allowed tracking, the events Meta already received stay with Meta under its terms (see
+    <a href="#meta">Crediting creators and measuring our ads</a>).
     PocketGym keeps its own record of what the AI cost to run for 13 months, and the deletion strips your
     account id out of those rows rather than keeping them attached to you. New AI reservation records
     are retained for up to 90 days; request admission records for up to 40 days, with scheduled cleanup.</p>
